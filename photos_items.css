@@ -10,6 +10,7 @@
 
 .gallery-2 .gallery__item--1 {
     width: 100%;
+    z-index: 1;
 }
 
 .gallery-2 .gallery__item--2 {
@@ -41,14 +42,19 @@
 }
 
 .gallery-5 .gallery__item--1 {
+    /* visibility: hidden; */
+    display: flex;
+    justify-content: center;
     width: 100%;
-    font-size: 100px;
-    font-family: Arial, Helvetica, sans-serif;
-    color:black;
-    text-align: center;
-    z-index: 0;
+    height: 100%;
+    padding-left: 5%;
+    padding-top: 10%;
 }
 
-.gallery-5 .gallery__item--2 {
-    display: flex;
+.gallery-6 .gallery__item--1 {
+   width: 100%;
+   object-fit: cover;
 }
+
+
+

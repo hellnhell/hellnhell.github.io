@@ -21,12 +21,12 @@
   
 }
 
+/* plantearse quitar grid y poner flex para responsive */
 .photo-content .gallery-1 {
   display: grid;
   grid-template-columns: repeat(3, minmax(450px, 1fr));
   width: 100%;
   margin-top: 5%;
-  grid-gap: 15px;
 }
 
 .photo-content .gallery-2 {
@@ -39,25 +39,30 @@
 .photo-content .gallery-3 {
   display: flex;
   width: 100%;
-  max-height: 100vh;
-  margin-top: 10%;
+  min-height: 100vh;
+  margin-top: 15%;
+  margin-left: 2%;
 }
 
 .photo-content .gallery-4 {
   display: grid;
   grid-template-columns: repeat(3, minmax(450px, 1fr));
   width: 100%;
-  max-height: 100vh;
-  grid-gap: 15px;
-  /* margin-top: 5%; */
-  margin-left: 10%;
+  min-height: 100vh;
 }
 
 .photo-content .gallery-5 {
-  display: flex;
   width: 100%;
-  /* max-height: 100vh; */
-  /* margin-top: 10%; */
+  min-height: 100vh;
+  margin-top: 10%;
+}
+
+.photo-content .gallery-6 {
+  display: flex;
+  min-width: 100%;
+  min-height: 100vh;
+  margin-left: 15%;
+  margin-top: 10%;
 }
 
 
