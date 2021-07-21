@@ -9,8 +9,8 @@
     height: 100%;
     object-fit: cover;
     font-family:'Helvetica Neue', sans-serif;
-    font-size: 2rem;
-    padding-top: 50%;
+    font-size: 1.8rem;
+    /* padding-top: 55%; */
   }
 
   .gallery-2 .gallery__img--0 {
@@ -37,11 +37,16 @@
     width: 100%;
     height: 80%;
     object-fit: contain;
-
   }
 
   .gallery-3 .gallery__vid--1 {
     width: 100%;
+  }
+
+  .gallery-3 .gallery__tex--1 {
+    text-align: end;
+    padding: 0.5%;
+    color: red;
   }
 
   .gallery-31 .gallery__vid--1 {
@@ -83,7 +88,6 @@
   .gallery-5 .gallery__tex--1{
     width: 100%;
     text-align: start;
-    font-family:'Helvetica Neue', sans-serif;
     font-size: 2rem;
     padding-left: 2%;
   }
@@ -92,6 +96,27 @@
     text-align: center;
     font-size: 1.2rem;
   }
+
+ .gallery-6 .gallery__tex--1{
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    padding: 20% 10% 10% 10%;
+  }
+
+  .gallery-6 .gallery__tex--1:hover{
+    background-color: white;
+    color: black;
+  }
+
+  .gallery-6 a{
+    text-decoration: none;
+    color: black;
+    line-height: 20%;
+    font-size: 1.5rem;
+}
 
   .gallery-7 .gallery__img--1 {
     width: 100%;
@@ -150,6 +175,6 @@
 }
 
 .gallery-12 .gallery__tex--1 {
-  font-size: 2rem;
+  font-size: 1.2rem;
   text-decoration: underline;
 }

@@ -136,7 +136,7 @@ h1 a {
   animation: 1s fadeIn ease forwards .5s;
 }
 
-footer {
+.footer {
     display: inline-flex;
     position: fixed;
     left: 0;
@@ -144,8 +144,12 @@ footer {
     width: 100%;
     background-color: white;
     padding: 0.8rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
+
+.footer footer {
+  opacity: 0.5;
+} 
 
 @keyframes grow {
   100% {
