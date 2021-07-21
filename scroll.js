@@ -10,10 +10,11 @@ timeline
     // .fromTo(".text", { opacity: 0 }, { opacity: 1, duration: 3 });
 
 let scene = new ScrollMagic.Scene({
-  triggerElement: ".photo-content",
+  triggerElement: ".gallery-1",
   duration: "100%",
   triggerHook: 0,
 })
-  .setTween(timeline)
-  // .setPin(".photo")
+   .setTween(timeline)
+  // .setPin(".photo-content")
   .addTo(controller);
+

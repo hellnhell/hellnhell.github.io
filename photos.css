@@ -15,10 +15,8 @@
   align-items: center;
   scroll-behavior: smooth;
   background: white;
-  font-family: 'New Tegomin', serif;
   width: 90%;
   padding-left: 2%;
-  
 }
 
 /* plantearse quitar grid y poner flex para responsive */
@@ -33,47 +31,102 @@
   display: flex;
   width: 100%;
   min-height: 100vh;
-  margin-left: 30%;
+  margin-left: 20%;
+  margin-bottom: 30%;
 }
 
-.photo-content .gallery-3 {
+.gallery-3 {
   display: flex;
   width: 100%;
   min-height: 100vh;
+  /* margin-bottom: 5%; */
+}
+.gallery-31 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  /* padding-top: 20%; */
   margin-top: 15%;
-  margin-left: 2%;
+  margin-left: 5%;
 }
 
 .photo-content .gallery-4 {
   display: grid;
-  grid-template-columns: repeat(3, minmax(450px, 1fr));
+  grid-template-columns: repeat(3, minmax(450px, 2fr));
   width: 100%;
   min-height: 100vh;
+  margin-left: 10%;
+  /* margin-top: 10% */
 }
 
 .photo-content .gallery-5 {
   width: 100%;
   min-height: 100vh;
   margin-top: 10%;
+  margin-left: 5%;
 }
 
 .photo-content .gallery-6 {
   display: flex;
   min-width: 100%;
-  min-height: 100vh;
-  margin-left: 15%;
-  margin-top: 10%;
+  min-height: 90vh;
+  margin-left: 5%;
+  margin-top: 5%;
 }
 
+.photo-content .gallery-7 {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  /* margin-top: 15%; */
+  margin-left: 3%;
+}
 
+.photo-content .gallery-8 {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  /* margin-top: 5%; */
+}
 
+.gallery-9 {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("imgs/cruz.JPG");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 5%;
+}
 
-/* .vid__aritz {
-    height: 100%;
-    width: 187.77777778vh; /* 100 * 16 / 9
-    min-width: 100%;
-    min-height: 56.25vw;  
-} */
+.photo-content .gallery-10{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 90vh;
+  margin-top: 10%;
+  margin-left: 5%;
+}
+
+.photo-content .gallery-11{
+  display: flex;
+  width: 100%;
+  min-height: 40vh;
+  /* margin-top: 5%; */
+  margin-left: 5%;
+}
+
+.gallery-12{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  min-height: 10vh;
+  margin-bottom: 10%;
+}
 
 @media (max-width: 768px) {
   .gallery__item--2{

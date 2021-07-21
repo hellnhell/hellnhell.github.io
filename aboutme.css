@@ -1,13 +1,13 @@
 .AboutMe {
     position: fixed;
-    left: 44%;
-    /* font-family: 'Copperplate', serif; */
-    font-family: 'New Tegomin', serif;
+    left: 46%;
+    /* font-family: 'New Tegomin', serif; */
+    font-family:'Helvetica Neue', sans-serif;
     margin-top: 1.2rem;
     padding: 0.1rem 0.3rem;
     text-align: center;
     background-color: white;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     z-index: 100 !important;
 }
 
@@ -22,7 +22,7 @@
     display: flex;
     width: 100%;
     padding: 1.2rem;
-    font-size: 0.9rem;;
+    font-size: 1.1rem;;
     transition: 3s;
     line-height: 2rem;
 }
