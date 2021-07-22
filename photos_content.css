@@ -10,7 +10,6 @@
     object-fit: cover;
     font-family:'Helvetica Neue', sans-serif;
     font-size: 1.8rem;
-    /* padding-top: 55%; */
   }
 
   .gallery-2 .gallery__img--0 {
@@ -45,7 +44,7 @@
 
   .gallery-3 .gallery__tex--1 {
     text-align: end;
-    padding: 0.5%;
+    padding: 0 4% 1% 0;
     color: red;
   }
 
