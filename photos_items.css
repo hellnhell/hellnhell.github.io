@@ -42,7 +42,7 @@
 .gallery-31 .gallery__item--2 {
     width: 35%;
     height: 50%;
-    margin-left: 40%;
+    margin-left: 50%;
 }
 .gallery-4 .gallery__item--1 {
     width: 33%;
@@ -64,7 +64,7 @@
 .gallery-6 .gallery__item--1 {
    display: flex;
    width: 50%;
-   height: 100%;
+   height: 50%;
    text-align: center;
    margin-top: 15%;
    margin-left: 2%;
@@ -110,7 +110,7 @@
 
 .gallery-10 .gallery__item--1 {
     width: 32%;
-    height: 100%;
+    height: 100%;   
 }
 
 .gallery-10 .gallery__item--2 {
