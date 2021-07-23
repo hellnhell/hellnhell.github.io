@@ -1,9 +1,9 @@
 .AboutMe {
     position: fixed;
-    left: 45.7%;
-    /* font-family: 'New Tegomin', serif; */
+    left: 50%;
     font-family:'Helvetica Neue', sans-serif;
     margin-top: 1.2rem;
+    margin-left: -54px;
     padding: 0.1rem 0.3rem;
     text-align: center;
     background-color: white;
