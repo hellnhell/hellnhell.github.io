@@ -250,19 +250,17 @@ ol, ul, a {
   .container-des {
     height: 50%;
     /* width: 100%; */
-    font-size: 4rem;
+    font-size: 5rem;
+    font-weight: 200;
   }
 
   .container-des p {
     display: inline-block;
     opacity: 0;
-    transform: translateX(0, 0);
-    
   }
 
   .container-des:hover p{
     opacity: 1;
-    transform: translateX(-10px, -10px);
     transition: all 1.5s linear;
   }
 
