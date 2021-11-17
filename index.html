@@ -7,15 +7,12 @@
 	<link rel="stylesheet" type="text/css" href="glitch.css">
     <link rel="stylesheet" type="text/css" href="aboutme.css">
     <link rel="stylesheet" type="text/css" href="index.css">
-    <link rel="stylesheet" type="text/css" href="photos.css">
-    <link rel="stylesheet" type="text/css" href="photos_items.css">
-    <link rel="stylesheet" type="text/css" href="photos_content.css">
 
 
- 
 	<link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 	<script src="https://player.vimeo.com/api/player.js"></script>
 
@@ -39,219 +36,182 @@
 		</div>
 	</nav>
 	<div class="container">
-		<h1>
-			<a href="#menu">
-				<h1 class="tnc-glitch">The Nature of Chaos</h1>
-			</a>
-		</h1>
-		<div class="popover" id="menu">
-			<div class = 'content'>
-				<a href="#" class="close"></a>
-				<div class="dinamic">
-					<ul class="dinamic-ul">
-						<li class="mySlides"><img src="imgs/silla_herradura.jpg" alt=""></li>
-						<li class="mySlides"><img src="imgs/glove_2.jpg" alt=""></li>
-						<li class="mySlides"><img src="imgs/snow_lines.JPG" alt=""></li>
-						<li class="mySlides"><img src="imgs/ghery1.JPG" alt=""></li>
-						<li class="mySlides"><img src="imgs/monja_grande.jpg" alt=""></li>
-						<li class="mySlides"><img src="imgs/señor2.JPG" alt=""></li>
-						<li class="mySlides"><img src="imgs/structure.JPG" alt=""></li>
-						<li class="mySlides"><img src="imgs/ventana_dus.jpg" alt=""></li>
-						<li class="mySlides"><img src="imgs/flowers2.jpg" alt=""></li>                    
-					</ul>
-				</div>
-				<div class = 'nav'>
-					<ul class = 'nav_list'>
-						<!-- <div class = 'nav_list_item'>
-							<li><a href="photos.html"class="c1">Click to photos</a></li>
-							<li><a href="#" class="c2">Click to NFT's</a></li>
-							<li><a href="videos.html" class="c3">Click to videos</a></li>
-						</div> -->
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	<section>
-	<div class="photo-content">
-		<div class="gallery-1">
-			<figure class="gallery__item--1">
-				<img src="imgs/women-dus.jpg" class="gallery__img--1" alt="Image 2">
-			</figure>
-			<figure class="gallery__item--2">
-				<p class="gallery__tex--1">Your sentence is my protection and my censure</p>
-			</figure>
-		</div>
-	</div>
-	<div class="photo-content">
-		<div class="gallery-2">
-			<figure class="gallery__item--0">
-				<img src="imgs/f4_1.webp" class="gallery__img--0" alt="Image 4">
-			</figure>
-			<figure class="gallery__item--1">
-			   <img src="imgs/rodin_walker.JPG" class="gallery__img--1" alt="rodin_walker">
-		   	</figure>
-		  	<figure class="gallery__item--2">
-			   <img src="imgs/cubic_buildin.JPG" class="gallery__img--2" alt="cubic_buildin">
-			</figure>
-			<figure class="gallery__item--3">
-				<img src="imgs/hanged.JPG" class="gallery__img--3" alt="hanged-man">
-			</figure>
-		</div>
-	</div>
-	<div class="gallery-3">
-		<figure class="gallery__item--1">
-			<div class="gallery__tex--1">Fullscreen and sound-on for a better experience <i class="fa fa-volume-up" aria-hidden="true"></i></div>
-			<div style="padding:75.00% 0 0 0;position:relative;">
-				<iframe src="https://player.vimeo.com/video/577940315?badge=0&autopause=0&player_id=0&app_id=58479/embed" allow="autoplay; fullscreen; picture-in-picture" autoplay allowfullscreen frameborder="0" style="position:absolute;top:0;left:0;width:100%;height:95%;"></iframe>
-			</div>
+		<figure class="container-des">
+			<h1 >The Nature Of Chaos</h1>
+			<p>This is a basic portfolio on a free hosting, it will be always under construction - Hellnhell -</p>
 		</figure>
 	</div>
 	<div class="photo-content">
-		<div class="gallery-31">
-			<figure class="gallery__item--1">
-				<video loop autoplay playsinline muted class="gallery__vid--1">
-					<source src="imgs/train-vid.MOV" type="video/webm" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+<!-- gallery-1 -->
+
+		<figure class="gallery-women-dus" data-aos="fade-up" >
+			<img src="imgs/women-dus.jpg" alt="Image 2">
+			<!-- <p>Your sentence is my protection and my censure</p> -->
+		</figure>
+		<!-- <figure class="gallery-sentence">
+		</figure> -->
+		<figure class="gallery-cub3d" data-aos="fade-up" > 
+			<a href="https://github.com/hellnhell/42_project_Cub3D_macOs">  
+				<video loop autoplay playsinline muted>
+					<source src="imgs/cub-sketch.mp4" type="video/webm" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
 				</video>
+			</a>
+		</figure>
+
+<!-- gallery-2 -->
+		<figure class="gallery-fag" >
+			<div class="gallery-fag-img"  >
+				<img src="imgs/f4_1.webp" alt="Image 4" data-aos="fade-in" data-aos-duration="2000">
+			</div>
+			<div class="gallery-walker-rodin">
+			   <img src="imgs/rodin_walker.JPG"alt="rodin_walker" data-aos="fade-in" data-aos-duration="2000">
+			   </div>
+			  <div class="gallery-cubic-build">
+			   <img src="imgs/cubic_buildin.JPG" alt="cubic_buildin" data-aos="fade-in" data-aos-duration="2000">
+			</div>
+			<div class="gallery-hanged">
+				<img src="imgs/hanged.JPG" alt="hanged-man" data-aos="fade-in" data-aos-duration="2000">
+			</div>
+		</figure>
+
+<!-- gallery-3 -->
+		<figure class="gallery-aritz-sketch" data-aos="fade-in"  data-aos-duration="2000">
+			<a href="" data-aos="fade-up"  data-aos-duration="2000">  
+				 <video loop autoplay playsinline muted>
+					<source src="imgs/aritz-sketch.mp4" type="video/webm" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+				</video>
+			</a>
+		</figure>
+
+<!-- gallery-4 -->
+		<figure class="gallery-filomen" data-aos="fade-up" >
+			<img src="imgs/coat3.JPG" class="gallery-coat" alt="coat">
+			<img src="imgs/coat1.JPG" class="gallery-coat" alt="coat-2">
+			<img src="imgs/coat2.JPG" class="gallery-coat" alt="coat-3">
+		</figure>
+		
+<!-- gallery-5 -->
+		<figure class="gallery-hefestion">
+			<h3>HEFESTION</h3>
+			<div class="gallery-hf-vid" style="padding:50.00% 0 0 0; position:relative;" data-aos="fade-in">
+				<iframe src="https://player.vimeo.com/video/577940315?badge=0&autopause=0&player_id=0&app_id=58479/embed"  webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder="0" style="position:absolute;top:0;left:0;width:100%;height:95%;"></iframe>
+			</div>
+			<div class="gallery-hf-inst">Fullscreen and sound-on for a better experience <i class="fa fa-volume-up" aria-hidden="true"></i></div>
+			<h3>HEFESTION</h3>
+		</figure>
+<!-- gallery-6 -->
+<!-- <div class="gallery-9"> -->
+	<figure class="gallery-9">
+	</figure>
+<!-- </div> -->
+<!-- gallery-7 -->
+<figure class="gallery-sun" data-aos="fade-in">
+	<video loop autoplay playsinline muted class="gallery-sun-vid" data-aos="fade-right" >
+				<source src="imgs/train-vid.MOV" type="video/webm" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+			</video>
+			<img src="imgs/train.JPG" class="gallery-sun-img" alt="girl-on-train" data-aos="fade-left" >
+		</figure>
+
+<!-- gallery-8 -->
+		<figure class="gallery-lb" data-aos="fade-in">
+			<figure class="gallery-lb-title">
+				<h3>LE BAIN</h3>
+				<p> - Three video series for a basque womensware label. Evoquing the sea, the north of Spain and female body. - </p>
 			</figure>
-			<figure class="gallery__item--2">
-				<img src="imgs/train.JPG" class="gallery__img--2" alt="girl-on-train">
-			</figure>
-		</div>
-	</div>
-	<div class="photo-content">
-		<div class="gallery-4">
-			<figure class="gallery__item--1">
-				<!-- <iframe src="coat1.html" width="500" height="600" frameBorder="0" ></iframe> -->
-				<img src="imgs/coat3.JPG" class="gallery__img--1" alt="coat">
-			</figure>
-			<figure class="gallery__item--2">
-				<!-- <iframe src="coat1.html" width="500" height="600" frameBorder="0" ></iframe> -->
-				<img src="imgs/coat1.JPG" class="gallery__img--1" alt="coat-2">
-			</figure>
-			<figure class="gallery__item--2">
-				<!-- <iframe src="coat1.html" width="500" height="600" frameBorder="0" ></iframe> -->
-				<img src="imgs/coat2.JPG" class="gallery__img--1" alt="coat-3">
-			</figure>
-		</div>
-	</div>
-	<div class="photo-content">
-		<div class="gallery-5">
-			<figure class="gallery__item--1">
-				<p class="gallery__tex--1"><b>LE BAIN</b></p>
-				<p class="gallery__tex--2"> - Three video series for a basque womensware label. Evoquing the sea, the north of Spain and female body. - </p>
-			</figure>
-			<figure class="gallery__item--1">
-				<video controls autoplay playsinline muted class="gallery__vid--1">
+			<figure class="gallery-lb-vids">
+				<video controls  playsinline autoplay muted class="gallery-lb-seagulls">
 					<source src="imgs/Test_seagulls_wb.mp4" type="video/webm" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
 				</video>
-		 	</figure>
-		 	<figure class="gallery__item--1">
-				 <video controls autoplay playsinline muted class="gallery__vid--2">
+				<video controls  playsinline autoplay muted class="gallery-lb-bottle">
 					<source src="imgs/Test_bot_wb.mp4" type="video/webm" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
 				</video>
-	  		</figure>
-			  <figure class="gallery__item--1">
-				  <video controls autoplay playsinline muted class="gallery__vid--1">
-					  <source src="imgs/TEST_SKN_end.mp4" type="video/webm" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-					</video>
-				</figure>
+				<video controls  playsinline autoplay muted class="gallery-lb-skin">
+					<source src="imgs/TEST_SKN_end.mp4" type="video/webm" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+				</video>
+			</figure>
+		</figure>
+
+		
+<!-- gallery-9 -->
+		<figure class="gallery-nonbin" data-aos="fade-in">
+			<div class="gallery__tex--1">
+				<div><b>NON-BINARY</b></div>
+				<a href="http://programalaplaza.medialab-prado.es/#/editor/9059decb-b680-4137-ba97-fa861e6509e5">
+					<i class="fa fa-link" aria-hidden="true"></i>
+					MMMAD 2021 & Medialab-prado: "Non-binary"
+				</a>
 			</div>
-		</div>
-		<div class="photo-content">
-			<div class="gallery-6">
-				<figure class="gallery__item--1">
-					<div class="gallery__tex--1">
-						<div><b>NON-BINARY</b></div>
-						<a href="http://programalaplaza.medialab-prado.es/#/editor/9059decb-b680-4137-ba97-fa861e6509e5">
-							<i class="fa fa-link" aria-hidden="true"></i>
-							MMMAD 2021 & medialab-prado "Non-binary"
-						</a>
-					</div>
-					<!-- <iframe class="gallery__img--1" src="nonbin.html" frameBorder="0" ></iframe> -->
-				</figure>
-				<figure class="gallery__item--1">
-					<div class="gallery__tex--1">
-						<div><b>NON-BINARY</b></div>
-						<a href="http://programalaplaza.medialab-prado.es/#/editor/6894c60d-8387-4380-a09c-0aaf7dd4edc3" class="gallery__tex--2">
-							<i class="fa fa-link" aria-hidden="true"></i>
-							MMMAD 2021 & medialab-prado "Fallen angel"
-						</a>
-					</div>
-					<!-- <iframe class="gallery__img--1" src="nonbin.html" frameBorder="0" ></iframe> -->
-				</figure>
+			<div class="gallery__tex--1">
+				<div><b>NON-BINARY</b></div>
+				<a href="http://programalaplaza.medialab-prado.es/#/editor/6894c60d-8387-4380-a09c-0aaf7dd4edc3" class="gallery__tex--2">
+					<i class="fa fa-link" aria-hidden="true"></i>
+					MMMAD 2021 & Medialab-prado: "Fallen angel"
+				</a>
 			</div>
-		</div>
-		<div class="photo-content">
-			<div class="gallery-7">
-				<figure class="gallery__item--1">
-					<video autoplay loop playsinline muted class="gallery__img--1">
-						<source src="imgs/ciu.MOV" type="video/webm" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-					</video>
-				</figure>
-				<figure class="gallery__item--2">
-					<img src="imgs/aritz-min_opt_white.webp" class="gallery__img--2" alt="Aritz">
-				</figure>
-				<figure class="gallery__item--3">
-					<video autoplay loop playsinline muted class="gallery__img--1">
-						<source src="imgs/wind.MOV" type="video/webm" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-					</video>
-				</figure>
-			</div>
-		</div>
-		<div class="photo-content">
-			<div class="gallery-8">
-				<figure class="gallery__item--1">
-					<img src="imgs/man_window.JPG" class="gallery__img--1" alt="man-window">
-				</figure>
-				<figure class="gallery__item--2">
-					<img src="imgs/ciu_tumbado.webp" class="gallery__img--2" alt="ciu-sculpture">
-				</figure>
-			</div>
-		</div>
-		<div class="gallery-9">
-				<figure class="gallery__item--1"></figure>
-		</div>
-		<div class="photo-content">
-			<div class="gallery-10">
-				<figure class="gallery__item--1">
-					<img src="imgs/señor1.JPG" class="gallery__img--1" alt="Düsseldorf-man">
-				</figure>
-				<figure class="gallery__item--2">
-					<img src="imgs/señor2.JPG" class="gallery__img--2" alt="Düsseldorf-man">
-				</figure>
-				<figure class="gallery__item--3">
-					<img src="imgs/señor3.JPG" class="gallery__img--3" alt="Düsseldorf-man">
-				</figure>
-			</div>
-		</div>
-		<div class="photo-content">
-			<div class="gallery-11">
-				<figure class="gallery__item--1">
-					<video controls playsinline muted poster="imgs/cuch.webp" class="gallery__vid--1">
-						<source src="imgs/lovers_cuch.mp4" type="video/webm" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-					</video>
-				</figure>
-				<figure class="gallery__item--2">
-					<p class="gallery__tex--1"><i class="fa fa-volume-up" aria-hidden="true"></i></p>
-					<br>
-				</figure>
-				<figure class="gallery__item--3">
-					<video controls playsinline muted  poster="imgs/xox.webp" class="gallery__vid--1">
-						<source src="imgs/lovers.mp4" type="video/webm" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-					</video>
-				</figure>
-			</div>
-			<br>
-		</div>
-		<div class="gallery-12">
-			<p class="gallery__tex--1"><b>PIECES AND CODE BY ME</b></p>
-		</div>
+		</figure>
+		<!-- <figure class="gallery-nonbin">
+		</figure> -->
+
+<!-- gallery-10 -->
+		<figure class="gallery-grua" data-aos="fade-in">
+			<video autoplay loop playsinline muted class="gallery-grua-vid">
+				<source src="imgs/ciu.MOV" type="video/webm" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+			</video>
+	
+			<img src="imgs/flowers3.jpg"  class="gallery-grua-window-img" alt="man-window">
+			<img src="imgs/ciu_tumbado.webp" class="gallery-grua-ciu-img"  alt="ciu-sculpture">
+		</figure>
+		<figure class="gallery-juncos">
+			<video autoplay loop playsinline muted class="gallery-juncos-vid">
+				<source src="imgs/wind.MOV" type="video/webm" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+			</video>
+		</figure>
+		
+<!-- gallery-11 -->
+
+<!-- gallery-12 -->
+		<figure class="gallery-dusman">
+			<img src="imgs/señor1.JPG" class="gallery-dusman-1" alt="Düsseldorf-man" data-aos="fade-right" >
+			<img src="imgs/señor2.JPG" class="gallery-dusman-2" alt="Düsseldorf-man" data-aos="fade-in" >
+			<img src="imgs/señor3.JPG" class="gallery-dusman-3" alt="Düsseldorf-man" data-aos="fade-left" >
+		</figure>
+
+<!-- gallery-13-->
+		<figure class="gallery-lovers" data-aos="fade-in">
+			<video controls playsinline muted poster="imgs/LOVERSI.png" class="gallery-cuch-vid">
+				<source src="imgs/lovers_cuch.mp4" type="video/webm" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+			</video>
+			<video controls playsinline muted  poster="imgs/LOVERSII.png" class="gallery-lovers-vid">
+				<source src="imgs/lovers.mp4" type="video/webm" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+			</video>
+		</figure>
+
+<!-- gallery-14-->
+		<figure class="gallery-sign">
+			<p><b>PIECES AND CODE BY ME</b></p>
+			<p>&copy; 2021 Hellnhell</p>
+		</figure>
 	</div>
-	</section>
 	<section class="footer">
-		<footer fixed>This is a basic portfolio (not responsive yet) on a free hosting, it will be always under construction - Hellnhell - elenmafe8@gmail.com</footer>
+		<footer fixed id="dark">
+			<ul class="btn-list rounded">
+				<li><a href="" class="btn-gradient rounded twitter"><i class="fa fa-linkedin"></i></a></li>
+				<li><a href="https://www.instagram.com/helln___" class="btn-gradient rounded instagram"><i class="fa fa-instagram"></i></a></li>
+				<li><a href="mailto:elenmafe8@gmail.com" class="btn-gradient rounded gmail"><i class="fa fa-envelope"></i></a></li>
+			</ul>
+		</footer>
 	</section>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- <section class="footer">
+		<footer fixed>This is a basic portfolio on a free hosting, it will be always under construction - Hellnhell - elenmafe8@gmail.com</footer>
+	</section> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.js"></script>
+	<script src="https://codepen.io/denic/pen/YzyPzKG"></script>
+	<script src="https://kit.fontawesome.com/8147ff4714.js" crossorigin="anonymous"></script>
+		<script src="non-bin.js"></script>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+	  AOS.init();
+	</script>
+
 </body>
 </html>

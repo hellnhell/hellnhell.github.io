@@ -1,6 +1,6 @@
 .tnc-glitch {
     transform: translate(-1%, -1%);
-    font-size: 5rem;
+    font-size: 4rem;
     text-decoration: none;
     font-weight: 700;
 }
@@ -11,8 +11,7 @@
     top: 0;
     left: 0;
 }
-
-
+  
 .tnc-glitch:before {
     color: black;
     z-index: -1;
@@ -28,26 +27,15 @@
     animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
 }
 
-
 .cos-glitch {
     transform: translate(-1%, -1%);
     font-size: 1.5rem;
     text-decoration: none;
     font-weight: 300;
     padding-top: 5% ;
-    padding-left: 30%;
+    padding-left: 20%;
 }
-.cos-glitch:before, .cos-glitch:after {
-    content: 'You may Click or Scroll';
-    opacity: 0.9;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding-top: 5% ;
 
-    padding-left: 30%;
-
-}
 
 .cos-glitch:before {
     color: black;
@@ -64,10 +52,7 @@
     animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
 }
 
-.cos-glitch h4 {
-    content: 'You may Click or Scroll';
-    font-size: 2rem;
-}
+
 
 @keyframes glitch {
     0% {
@@ -96,17 +81,3 @@
         transform: translate(0);
    }
 }
-
-
-
-/* PIXELADO 
-.hover07 figure img {
-	-webkit-filter: blur(3px);
-	filter: blur(3px);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-}
-.hover07 figure:hover img {
-	-webkit-filter: blur(0);
-	filter: blur(0);
-}*/
