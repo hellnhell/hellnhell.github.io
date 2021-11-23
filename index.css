@@ -226,6 +226,9 @@ ol, ul, a {
     .gallery-dusman-1{
       display: none;
     }
+    .gallery-grua .gallery-grua-window-img{
+      filter: grayscale() invert();
+    }
 
     .gallery-sign {
       width: 100%;
