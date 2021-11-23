@@ -256,12 +256,8 @@ ol, ul, a {
 
   .container-des p {
     display: inline-block;
-    opacity: 0;
-  }
+    font-size: 3rem;
 
-  .container-des:hover p{
-    opacity: 1;
-    transition: all 1.5s linear;
   }
 
   .gallery-women-dus{
