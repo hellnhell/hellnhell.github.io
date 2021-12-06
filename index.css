@@ -174,7 +174,7 @@ ol, ul, a {
       display: flex;
       width: 100%;
       height: 100vh;
-      background-image: url("imgs/cruz.webp");
+      background-image: url("imgs/cruz.png");
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
@@ -187,6 +187,7 @@ ol, ul, a {
       height: 100%;
       object-fit: contain;
     }
+
     .gallery-9 .gallery__item--1 {
       width: 100%;
       height: 100%;
@@ -276,6 +277,10 @@ ol, ul, a {
     margin-top: 55%;
   }
 
+  .gallery-cub3d video:hover{
+    cursor: pointer;
+  }
+
   .gallery-fag {
     width: 100%;
     height: 100%;
@@ -322,6 +327,10 @@ ol, ul, a {
 
   .gallery-aritz-sketch video{
     width: 75%;
+  }
+
+  .gallery-aritz-sketch video:hover{
+    cursor: pointer;
   }
 
   .gallery-hefestion {
