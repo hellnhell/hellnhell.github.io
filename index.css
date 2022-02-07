@@ -19,34 +19,54 @@ ol, ul, a {
   text-decoration: none;
 }
 
-
-.container {
-  scroll-behavior: smooth;
-  height: 100vh;
+#cover {
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  scroll-behavior: smooth;
-  background: white;
-  padding: 2%;
+  height: 100vh;
+  object-fit:fill; 
+  position:absolute;
+  top: 0;
+  z-index: -1;
+  filter:hue-rotate(180deg) brightness(1) invert();
 }
 
+#cover video{
+  width: 100%;
+  height:100vh;
+  object-fit: cover;
+
+}
+
+.container {
+  z-index: 1;
+  height: 100vh;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: white; */
+  /* filter: invert() ; */
+  
+}
+
+
 .container-des {
-  font-size: 3.2rem;
-  height: 100%;
+  font-size: 1.5rem;
+  position: absolute;
   display: flex;
   flex-wrap: wrap;
-  justify-content: left;
   align-items: center;
-  /* width: 75%; */
-  margin-top: 2%;
-  /* padding-right: 15%; */
+  width: 100%;
+  bottom: 2; 
+  right: 0;
+  color: white;
+  padding: 5%;
+
 }
 
 .container-des p {
-  display: none;
+  font-size: 2rem; 
+  /* margin-top: 20%; */
+   height: 30%;
 }
 
 .photo-content {
@@ -75,18 +95,22 @@ ol, ul, a {
       padding-top: 5%;
     }
 
-    .gallery-women-dus {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
 
     .gallery-women-dus img {
       filter: brightness(2);
     }
     
+    .gallery-wp video {
+      width: 100%;
+    }
+    
+    .gallery-aritz-sketch .ul-aritz {
+      display: none;
+    }
+    .gallery-aritz-sketch {
+      filter: invert();
+    }
+
     .gallery-hefestion {
       width: 100%;
       height: 100%;
@@ -95,29 +119,32 @@ ol, ul, a {
       justify-content: center;
       align-items: center;
       text-align: center;
-      margin: 5% 0 5%;
-      background-color: black;
-      color: white;
-    }
-
-    .gallery-hf-inst {
-      width: 100%;
-      z-index: 1;
-      color: red;
-      /* font-size: 1.5rem; */
+      /* margin: 5% 0 5%; */
+      background-image: url("imgs/HEFES.png");
+      background-repeat:repeat;
+       background-size: contain;
+       margin-bottom: 5%;
+      /*background-position-x: left 10%; */
     }
 
     .gallery-hf-vid {
       width: 100%;
     }
 
-    .gallery-hefestion h3 {
-      font-size: 3rem;
-      line-height: 3;
+
+    .gallery-filomen {
+      width: 80%;
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 10%;
+      margin-bottom: 5%;
     }
 
-    .gallery-filomen .gallery-coat2 {
-      display: none;;
+    .gallery-filomen iframe{
+      width: 100%;
+      height: 100%; 
     }
 
     .gallery-sun .gallery-sun-vid {
@@ -149,8 +176,8 @@ ol, ul, a {
       font-size: 0.8rem;
     }
   
-  .gallery-nonbin .gallery__tex--1{
-      font-family:'Helvetica Neue', sans-serif;
+    .gallery-nonbin .gallery__tex--1{
+      /* font-family:'Helvetica Neue', sans-serif; */
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -246,37 +273,34 @@ ol, ul, a {
     .footer {
       display: none;
     }
+
 }
 
 @media only screen and (min-width: 1024px) {
+
   .container-des {
-    height: 50%;
-    /* width: 100%; */
-    font-size: 5rem;
-    font-weight: 200;
+    font-size: 2rem;
+    padding-left: 5%;
   }
 
-  .container-des p {
-    display: inline-block;
-    font-size: 3rem;
-
-  }
 
   .gallery-women-dus{
-    flex-direction: row;
-    width: 100%;
+    display: flex;
+    height: 120%;
     align-content: center;
   }
   .gallery-women-dus img{
-    width: 65%;
-    padding: 2%;
-  }
-  .gallery-women-dus p{
-    width: 35%;
     height: 100%;
-    margin-top: 55%;
+    width: 100%;
+    padding: 1%;
   }
 
+  .gallery-cub3d {
+    display: flex;
+    height: 100%;
+
+    margin-bottom: 5%;
+  }
   .gallery-cub3d video:hover{
     cursor: pointer;
   }
@@ -287,6 +311,7 @@ ol, ul, a {
     display: flex;
     justify-content: space-between;
     margin-top: 10%;
+    margin-bottom: 5%;
   }
   
   .gallery-fag div{
@@ -313,52 +338,96 @@ ol, ul, a {
     top: -5%;
   }
 
+  .gallery-wp {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    margin-bottom: 10%;
+  }
+  .gallery-wp video {
+    width: 25%;
+  }
+
   .gallery-aritz-sketch {
     width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
+    margin-bottom: 10%;
+  }
+
+  .gallery-aritz-sketch .ul-aritz {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 15px;
+    list-style-type: none;
+  }
+
+  .li-artiz{
+    object-fit: cover;
+    width: 100%;
   }
 
   .gallery-aritz-sketch a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
   }
 
   .gallery-aritz-sketch video{
-    width: 75%;
+    width: 100%;
   }
 
-  .gallery-aritz-sketch video:hover{
+  .gallery-aritz-sketch li .tx-aritz{
+    display: none;
+  }
+  .gallery-aritz-sketch li:hover a{
+    visibility: collapse;
+  }
+
+  .gallery-aritz-sketch li:hover .tx-aritz{
+    display: flex;
+    width: 100%;
+    font-size: 1.8rem;
+    color: rgb(0, 195, 255);
+    position: absolute;
     cursor: pointer;
+    top: 50%;
+  }
+
+  #resp-aritz{
+    display: none;
   }
 
   .gallery-hefestion {
     /* margin: 10% 0 5% 0; */
     height: 100vh;
-    background-color: transparent;
+    background-size: 39%;
   }
 
-  .gallery-hefestion h3 {
-    display: none;
-  }
 
   .gallery-hf-vid {
     padding: 45.00% 0 0 0 !important;
   }
 
+  .gallery-filomen iframe {
+    height: 100%;
+  }
 
+  /* 
   .gallery-filomen {
     width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin-top: 10%;
+    margin-bottom: 5%;
   }
 
-  .gallery-filomen .gallery-coat {
-    width: 30%;
-  }
+  .gallery-filomen iframe {
+    height: 100%;
+  } */
 
   .gallery-9 {
     height: 120vh;
@@ -548,11 +617,11 @@ ol, ul, a {
   
   
   #dark .btn-gradient {
-    color:rgba(0, 0, 0, 0.54);
+    color:rgba(250, 90, 90, 0.733);
     box-shadow:0 0 1px rgba(255,255,255,0.54)
   }
   
   #dark .btn-gradient:hover {
-    color:rgb(214, 0, 0)
+    color:rgb(214, 0, 0);
   }
 }
