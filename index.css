@@ -19,9 +19,9 @@ ol, ul, a {
 
 #cover {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   object-fit:fill; 
-  position:absolute;
+  position: fixed;
   top: 0;
   z-index: -1;
   filter:hue-rotate(180deg) brightness(1) invert();
@@ -76,8 +76,8 @@ ol, ul, a {
   justify-content: center;
   align-items: center;
   scroll-behavior: smooth;
-  background: white;
   padding: 2%;
+  margin-top: 10%;
 }
 
 
@@ -95,17 +95,20 @@ ol, ul, a {
 
 
     .gallery-women-dus img {
-      filter: brightness(2);
+      filter: opacity(0.8) brightness(2) ;
     }
-    
-    .gallery-cub3d video{
-      height: 100%;
+
+    .gallery-wp {
+      min-width: 100%;
+      min-height: 100%;
+      margin-bottom: 10%;
     }
 
     .gallery-wp video {
       width: 100%;
       height: 100%;
     }
+  
     
     .gallery-aritz-sketch .ul-aritz {
       display: none;
@@ -123,9 +126,9 @@ ol, ul, a {
       align-items: center;
       text-align: center;
       /* margin: 5% 0 5%; */
-      background-image: url("imgs/HEFES.png");
+      /* background-image: url("imgs/HEFES.png");
       background-repeat:repeat;
-       background-size: contain;
+       background-size: contain; */
        margin-bottom: 5%;
       /*background-position-x: left 10%; */
     }
@@ -134,25 +137,24 @@ ol, ul, a {
       width: 100%;
     }
 
-
-    .gallery-filomen {
+    .gallery-highxt {
       width: 80%;
       height: 100%;
       display: flex;
       justify-content: space-around;
       align-items: center;
       margin-top: 10%;
-      margin-bottom: 5%;
+      /* margin-bottom: 5%; */
     }
 
-    .gallery-filomen iframe{
+    .gallery-highxt iframe{
       width: 100%;
       height: 100%; 
     }
 
-    .gallery-sun {
+    /* .gallery-sun {
       height: 100%;
-    }
+    } */
     .gallery-sun .gallery-sun-vid {
       display: none;
     }
@@ -166,7 +168,7 @@ ol, ul, a {
     .gallery-lb .gallery-lb-title{
       margin: 5% 2% 15% 0;
       font-size: 1.2rem;
-    
+      color: white;
     }
 
     .gallery-nonbin {
@@ -174,6 +176,7 @@ ol, ul, a {
       width: 100%;
       height: 50%;
       margin-top: 10%;
+
     }
 
     .gallery-nonbin a {
@@ -189,14 +192,13 @@ ol, ul, a {
       text-align: center;
       width: 100%;
       height: 100%;
-      border: 1px solid black;
       background-color: black;
       color: white;
       padding: 20% 10%;
     }
   
     .gallery-nonbin .gallery__tex--1:hover{
-      background-color: white;
+      background-color: transparent;
       color: black;
     }
 
@@ -204,7 +206,7 @@ ol, ul, a {
     .gallery-9 { 
       display: flex;
       width: 100%;
-      height: 120vh;
+      height: 150vh;
       background-image: url("imgs/cruz.png");
       background-attachment: fixed;
       background-position: center;
@@ -212,6 +214,7 @@ ol, ul, a {
       background-size: contain;
     }
 
+    
     .gallery-lb-title {
         width: 100%;
         height: 50%;
@@ -265,6 +268,11 @@ ol, ul, a {
       display: none;
     }
 
+    .gallery-cub3d video{
+      height: 100%;
+    }
+
+
 }
 
 @media only screen and (min-width: 1024px) {
@@ -279,6 +287,7 @@ ol, ul, a {
     display: flex;
     height: 120%;
     align-content: center;
+    margin-bottom: 10%;
   }
   .gallery-women-dus img{
     height: 100%;
@@ -289,11 +298,41 @@ ol, ul, a {
   .gallery-cub3d {
     display: flex;
     height: 100%;
-
-    margin-bottom: 5%;
+    margin-bottom: 10%;
   }
+
   .gallery-cub3d video:hover{
     cursor: pointer;
+  }
+
+  .gallery-wp {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 80%;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .gallery-wp div{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+  .gallery-wp .big {
+    width: 20%;
+  }
+  .gallery-wp div video {
+    width: 15%;
+  }
+
+  .gallery-wp  #alone{
+    width: 30%;
   }
 
   .gallery-fag {
@@ -301,8 +340,8 @@ ol, ul, a {
     height: 100%;
     display: flex;
     justify-content: space-between;
-    margin-top: 10%;
-    margin-bottom: 5%;
+    margin-top: 5%;
+    margin-bottom: 10%;
   }
   
   .gallery-fag div{
@@ -327,17 +366,6 @@ ol, ul, a {
   .gallery-fag  .gallery-hanged {
     left: 75%;
     top: -5%;
-  }
-
-  .gallery-wp {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: space-around;
-    margin-bottom: 10%;
-  }
-  .gallery-wp video {
-    width: 25%;
   }
 
   .gallery-aritz-sketch {
@@ -382,7 +410,7 @@ ol, ul, a {
     font-size: 1.8rem;
     color: rgb(0, 195, 255);
     position: absolute;
-    cursor: pointer;
+    cursor: default;
     top: 50%;
   }
 
@@ -390,24 +418,21 @@ ol, ul, a {
     display: none;
   }
 
+  
   .gallery-hefestion {
     height: 100vh;
     background-size: 39%;
+    margin-top: 5%;
   }
-
-
   .gallery-hf-vid {
     padding: 45.00% 0 0 0 !important;
   }
 
-  .gallery-filomen iframe {
+  .gallery-highxt iframe {
     height: 100%;
+    margin-top: 5%;
   }
 
-/*   
-  .gallery-9 {
-    height: 120vh;
-  } */
 
   .gallery-sun {
     display: flex;
