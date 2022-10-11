@@ -47,7 +47,15 @@
     /* margin-top: 2%; */
   }
   
- 
+  .cv{
+    width: 100%;
+    height: 100%;
+    background-image: url("imgs/cv_img.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
   @keyframes typing {
     from {
       width: 0
