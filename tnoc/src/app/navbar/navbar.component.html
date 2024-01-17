@@ -1,0 +1,10 @@
+<nav class="AboutMe" >
+    <h1 class="AboutMe-icon"> About Me</h1>
+    <div class="AboutMe-des">
+        <ul class="ul-link">
+            <li *ngFor="let link of navLinks">
+                <a [href]="link.url">{{link.name}}</a>
+            </li>
+        </ul>
+    </div>
+</nav>

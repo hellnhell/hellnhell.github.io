@@ -1,0 +1,20 @@
+/* photo-projects.component.css */
+.photo-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Creates a responsive grid */
+	grid-gap: 10px; /* Adjust the gap between grid items */
+	padding: 10px;
+  }
+  
+  .photo-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .photo-item img {
+	width: 100%; /* Makes image fill the container */
+	height: auto;
+	object-fit: cover; /* Adjusts the image size to cover the area without stretching */
+  }
+  

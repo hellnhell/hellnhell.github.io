@@ -1,0 +1,22 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+  position: relative;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: monospace;
+  scroll-behavior: smooth;
+}
+
+ol,
+ul,
+a {
+  list-style: none;
+  text-decoration: none;
+}

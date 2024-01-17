@@ -1,0 +1,23 @@
+.main-content {
+	display: flex;
+	justify-content: center;
+	align-items: center; 
+	height: 100vh;
+  
+	.main-menu {
+	  display: flex;
+	  flex-direction: row;
+	  justify-content: space-around;
+  
+	  @media (max-width: 600px) {
+		flex-direction: column;
+	  }
+  
+	  .sketch {
+		width: 300px; // Adjust size as needed
+		height: 300px;
+		// Additional styling for each sketch
+	  }
+	}
+  }
+  
