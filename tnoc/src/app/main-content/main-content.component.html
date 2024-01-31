@@ -1,289 +1,46 @@
-<div class="main-content">
-	<div class="main-menu">
-	  <div class="sketch" id="photo-sketch"><a routerLink="/photography">Photography</a></div>
-	  <div class="sketch" id="video-sketch"><a routerLink="/videos">Video</a></div>
-	  <div class="sketch" id="code-projects-sketch"><a routerLink="/code-projects">Coding</a></div>
+<div class="main-content"  [class.dark-mode]="isDarkMode" [class.light-mode]="!isDarkMode">
+	<aside class="sidebar">
+		<ul>
+		  <li><a routerLink="/exhibition">Exhibition</a></li>
+		  <li><a routerLink="/works">Works</a></li>
+		  <li><a routerLink="/news">News</a></li>
+		</ul>
+		<button class="mode-btn" (click)="toggleTheme()" [class.dark-mode]="isDarkMode" [class.light-mode]="!isDarkMode">
+			<span class="checkbox"></span>
+			{{ isDarkMode ? 'Light Mode' : 'Dark Mode' }}
+		  </button>
+	</aside>
+	<div class="main-menu" #mainMenu>
+ <!-- Photography Menu -->
+	<section class="menu-grid photography-menu" *ngIf="menus[0].isActive">
+		<div class="menu-title">{{ menus[0].title }}</div>
+		<div class="grid-items">
+		<div class="grid-item" *ngFor="let item of menus[0].items">
+			<img [src]="item.image" [alt]="item.title">
+			<div class="title">{{ item.title }}</div>
+			<div class="year">{{ item.year }}</div>
+		</div>
+		</div>
+	</section>	
+	<section class="menu-grid video-menu" *ngIf="menus[1].isActive">
+		<div class="menu-title">{{ menus[1].title }}</div>
+		<div class="grid-items">
+		<div class="grid-item" *ngFor="let item of menus[1].items">
+			<img [src]="item.image" [alt]="item.title">
+			<div class="title">{{ item.title }}</div>
+			<div class="year">{{ item.year }}</div>
+		</div>
+		</div>
+	</section>	
+	<section class="menu-grid code-menu" *ngIf="menus[2].isActive">
+		<div class="menu-title">{{ menus[2].title }}</div>
+		<div class="grid-items">
+		<div class="grid-item" *ngFor="let item of menus[2].items">
+			<img [src]="item.image" [alt]="item.title">
+			<div class="title">{{ item.title }}</div>
+			<div class="year">{{ item.year }}</div>
+		</div>
+		</div>
+	</section>	
 	</div>
-  </div>
-  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-
-  
-<!-- <div class="photo-content">
-			<figure class="gallery-women-dus" data-aos="fade-in" >
-				<img src="imgs/women-dus.jpg" alt="Image 2">
-			</figure>
-	
-			<figure class="gallery-cub3d" data-aos="fade-in"> 
-				<a href="https://github.com/hellnhell/42_project_Cub3D_macOs">  
-					<video loop autoplay playsinline muted>
-						<source src="imgs/cub-sketch.mp4" type="video/mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-					</video>
-				</a>
-			</figure>
-			<figure class="gallery-wp"  data-aos="fade-in">
-		
-				<video class="big" playsinline poster="imgs/wp_cover1.png" controls>
-					<source src="imgs/WP_1.mp4" type="video/mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-				</video>
-				<video class="big" playsinline poster="imgs/wp_cover3.png" controls>
-					<source src="imgs/wp_4.mp4" type="video/mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-				</video>
-				<div  data-aos="fade-in">
-					<video playsinline controls poster="imgs/wp_cover_cardo.png">
-						<source src="imgs/CLIP_CARDO_1.mp4" type="video/mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-					</video>
-					<video playsinline controls poster="imgs/wp_cover_sand.png">
-						<source src="imgs/CLIP_SAND_1.mp4" type="video/mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-					</video>
-					<video playsinline controls poster="imgs/wp_cover_mirror.png">
-						<source src="imgs/CLIP_MIR_1.mp4" type="video/mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-					</video>
-					<video playsinline controls poster="imgs/wp_cover_chair.png">
-						<source src="imgs/CLIP_CHAIR_1.mp4" type="video/mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-					</video>
-				</div>
-				<video id="alone" playsinline  poster="imgs/wp_cover2.png" controls data-aos="fade-in">
-					<source src="imgs/FULL_1_BN.mp4" type="video/mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-				</video>
-				<div  data-aos="fade-in">
-					<video playsinline controls>
-						<source src="imgs/MYLAR_Socials 15 sec 3.mp4" type="video/mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-					</video>
-					<video playsinline controls >
-						<source src="imgs/MYLAR_Socials 15 sec 4.mp4" type="video/mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-					</video>
-					<video playsinline controls >
-						<source src="imgs/MYLAR_Socials 15 sec 5.mp4" type="video/mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-					</video>
-				</div>
-			</figure>
-			<figure class="gallery-fag" data-aos="fade-in">
-				<div class="gallery-fag-img"  >
-					<img src="imgs/f4.png" alt="Image 4" >
-				</div>
-				<div class="gallery-walker-rodin">
-				   <img src="imgs/rodin_walker.png"alt="rodin_walker" >
-				   </div>
-				  <div class="gallery-cubic-build">
-				   <img src="imgs/cubic_buildin.png" alt="cubic_buildin" >
-				</div>
-				<div class="gallery-hanged">
-					<img src="imgs/hanged.png" alt="hanged-man" >
-				</div>
-			</figure>
-	
-	
-			<figure class="gallery-aritz-sketch" data-aos="fade-in">
-				<ul class="ul-aritz">
-					<li class="li-aritz">
-						<a href="https://github.com/ShamansGarage/InteractiveNoiseOverImageP5" >
-							<video loop autoplay playsinline muted >
-								<source src="imgs/aritz-sketch.mp4" type="video/mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-							</video>
-						</a>
-						<div class="tx-aritz">Fuck You</div>
-					</li>
-					<li class="li-aritz">
-						<a href="https://github.com/ShamansGarage/InteractiveNoiseOverImageP5" >
-							<video loop autoplay playsinline muted >
-								<source src="imgs/aritz-sketch.mp4" type="video/mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-							</video>
-						</a>
-						<div class="tx-aritz">I love You</div>
-					</li>
-					<li class="li-aritz">
-						<a href="https://github.com/ShamansGarage/InteractiveNoiseOverImageP5" >
-							<video loop autoplay playsinline muted >
-								<source src="imgs/aritz-sketch.mp4" type="video/mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-							</video>
-						</a>
-						<div class="tx-aritz">I love You</div>
-					</li>
-					<li class="li-aritz">
-						<a href="https://github.com/ShamansGarage/InteractiveNoiseOverImageP5" >
-							<video loop autoplay playsinline muted >
-								<source src="imgs/aritz-sketch.mp4" type="video/mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-							</video>
-						</a>
-						<div class="tx-aritz">I love You</div>
-					</li>
-					<li class="li-aritz">
-						<a href="https://github.com/ShamansGarage/InteractiveNoiseOverImageP5" >
-							<video loop autoplay playsinline muted >
-								<source src="imgs/aritz-sketch.mp4" type="video/mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-							</video>
-						</a>
-						<div class="tx-aritz">Fuck You</div>
-					</li>
-					<li class="li-aritz">
-						<a href="https://github.com/ShamansGarage/InteractiveNoiseOverImageP5" >
-							<video loop autoplay playsinline muted >
-								<source src="imgs/aritz-sketch.mp4" type="video/mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-							</video>
-						</a>
-						<div class="tx-aritz">I love You</div>
-					</li>
-					<li class="li-aritz">
-						<a href="https://github.com/ShamansGarage/InteractiveNoiseOverImageP5" >
-							<video loop autoplay playsinline muted >
-								<source src="imgs/aritz-sketch.mp4" type="video/mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-							</video>
-						</a>
-						<div class="tx-aritz">Fuck You</div>
-					</li>
-					<li class="li-aritz" >
-						<a href="https://github.com/ShamansGarage/InteractiveNoiseOverImageP5" >
-							<video loop autoplay playsinline muted >
-								<source src="imgs/aritz-sketch.mp4" type="video/mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-							</video>
-							<div class="tx-aritz" style="position: absolute; top: 0;">I love You</div>
-						</a>
-					</li>
-					<li class="li-aritz">
-						<a href="https://github.com/ShamansGarage/InteractiveNoiseOverImageP5" >
-							<video loop autoplay playsinline muted >
-								<source src="imgs/aritz-sketch.mp4" type="video/mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-							</video>
-						</a>
-						<div class="tx-aritz">I love You</div>
-					</li>
-					<li class="li-aritz">
-						<a href="https://github.com/ShamansGarage/InteractiveNoiseOverImageP5">
-							<video loop autoplay playsinline muted >
-								<source src="imgs/aritz-sketch.mp4" type="video/mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-							</video>
-						</a>
-						<div class="tx-aritz">I love You</div>
-					</li>
-					<li class="li-aritz">
-						<a href="https://github.com/ShamansGarage/InteractiveNoiseOverImageP5">
-							<video loop autoplay playsinline muted >
-								<source src="imgs/aritz-sketch.mp4" type="video/mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-							</video>
-						</a>
-						<div class="tx-aritz">Fuck You</div>
-					</li>
-					<li class="li-aritz">
-						<a href="https://github.com/ShamansGarage/InteractiveNoiseOverImageP5">
-							<video loop autoplay playsinline muted >
-								<source src="imgs/aritz-sketch.mp4" type="video/mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-							</video>
-						</a>
-						<div class="tx-aritz">I love You</div>
-					</li>
-					<li class="li-aritz">
-						<a href="https://github.com/ShamansGarage/InteractiveNoiseOverImageP5">
-							<video loop autoplay playsinline muted >
-								<source src="imgs/aritz-sketch.mp4" type="video/mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-							</video>
-						</a>
-						<div class="tx-aritz">I love You</div>
-					</li>
-					<li class="li-aritz">
-						<a href="https://github.com/ShamansGarage/InteractiveNoiseOverImageP5">
-							<video loop autoplay playsinline muted >
-								<source src="imgs/aritz-sketch.mp4" type="video/mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-							</video>
-						</a>
-						<div class="tx-aritz">Fuck You</div>
-					</li>
-					<li class="li-aritz">
-						<a href="https://github.com/ShamansGarage/InteractiveNoiseOverImageP5">
-							<video loop autoplay playsinline muted >
-								<source src="imgs/aritz-sketch.mp4" type="video/mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-							</video>
-						</a>
-						<div class="tx-aritz">I love You</div>
-					</li>		
-				</ul>
-				<a href="https://github.com/ShamansGarage/InteractiveNoiseOverImageP5" id="resp-aritz">
-					<video loop autoplay playsinline muted >
-						<source src="imgs/aritz-sketch.mp4" type="video/mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-					</video>
-				</a>
-				
-			</figure>		
-			<figure class="gallery-9" data-aos="fade-in"></figure>
-	
-			<figure class="gallery-sun" data-aos="fade-in">
-				<video loop autoplay playsinline muted class="gallery-sun-vid"  >
-					<source src="imgs/train-vid.MOV" type="video/mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-				</video>
-				<img src="imgs/train.png" class="gallery-sun-img" alt="girl-on-train"  >
-			</figure>
-	
-			<figure class="gallery-lb" data-aos="fade-in">
-				<figure class="gallery-lb-title" >
-					<h3>LE BAIN</h3>
-					<p> - Three video series for a basque womensware label. Evoquing the sea, the north of Spain and female body. - </p>
-				</figure>
-				<figure class="gallery-lb-vids">
-					<video controls  playsinline autoplay muted class="gallery-lb-seagulls" >
-						<source src="imgs/Test_seagulls_wb.mp4" type="video/mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-					</video>
-					<video controls  playsinline autoplay muted class="gallery-lb-bottle" >
-						<source src="imgs/Test_bot_wb.mp4" type="video/mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-					</video>
-					<video controls  playsinline autoplay muted class="gallery-lb-skin" >
-						<source src="imgs/TEST_SKN_end.mp4" type="video/mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-					</video>
-				</figure>
-			</figure>
-	
-			
-			<figure class="gallery-nonbin" data-aos="fade-in">
-				<div class="gallery__tex--1" >
-					<div><b>NON-BINARY</b></div>
-					<a href="http://programalaplaza.medialab-prado.es/#/editor/9059decb-b680-4137-ba97-fa861e6509e5">
-						<i class="fa fa-link" aria-hidden="true"></i>
-						MMMAD 2021 & Medialab-prado: "Non-binary"
-						<br>(Play button left corner)
-					</a>
-				</div>
-				<div class="gallery__tex--1" >
-					<div><b>NON-BINARY</b></div>
-					<a href="http://programalaplaza.medialab-prado.es/#/editor/6894c60d-8387-4380-a09c-0aaf7dd4edc3" class="gallery__tex--2">
-						<i class="fa fa-link" aria-hidden="true"></i>
-						MMMAD 2021 & Medialab-prado: "Fallen angel"
-						<br>(Play button left corner)
-					</a>
-				</div>
-			</figure>
-
-	
-			<figure class="gallery-grua" data-aos="fade-in">
-				<video autoplay loop playsinline muted class="gallery-grua-vid" >
-					<source src="imgs/ciu.MOV" type="video/mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-				</video>
-		
-				<img src="imgs/man_window.png"  class="gallery-grua-window-img" alt="man-window" >
-				<img src="imgs/ciu-tumbado.png" class="gallery-grua-ciu-img"  alt="ciu-sculpture" >
-			</figure>
-			<figure class="gallery-juncos" data-aos="fade-in">
-				<video autoplay loop playsinline muted class="gallery-juncos-vid" >
-					<source src="imgs/wind.MOV" type="video/mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-				</video>
-			</figure>
-			
-	
-			<figure class="gallery-dusman" data-aos="fade-in">
-				<img src="imgs/señor1.JPG" class="gallery-dusman-1" alt="Düsseldorf-man"  >
-				<img src="imgs/señor2.JPG" class="gallery-dusman-2" alt="Düsseldorf-man"  >
-				<img src="imgs/señor3.JPG" class="gallery-dusman-3" alt="Düsseldorf-man"  >
-			</figure>
-	
-			<figure class="gallery-lovers" data-aos="fade-in">
-				<video controls playsinline poster="imgs/LOVERSI.png" class="gallery-cuch-vid" >
-					<source src="imgs/lovers_cuch.mp4" type="video/mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-				</video>
-				<video controls playsinline poster="imgs/LOVERSII.png" class="gallery-lovers-vid" >
-					<source src="imgs/lovers.mp4" type="video/mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-				</video>
-			</figure>
-	
-			<figure class="gallery-sign" data-aos="fade-in">
-				<p><b>PIECES AND CODE BY ME</b></p>
-				<p>&copy; 2021 Hellnhell</p>
-			</figure>
-		</div> -->
+</div>
