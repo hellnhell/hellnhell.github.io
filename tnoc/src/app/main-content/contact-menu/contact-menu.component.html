@@ -1,0 +1,17 @@
+<div style="width: 100%;">
+	<section class="menu-grid contact-menu" >
+		<div class="menu-title">
+			<span><strong>{{ menu?.title }}</strong></span>
+			<span><strong>{{menu?.number}}</strong></span>
+		</div>
+		<div class="content-container">
+			<div class="grid-items">
+				<ul class="ul-link">
+					<li *ngFor="let link of navLinks">
+						<a [href]="link.url">{{link.name}}</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>	
+</div>

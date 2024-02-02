@@ -10,6 +10,12 @@ import { MainContentComponent } from './main-content/main-content.component';
 import { CodeProjectsComponent } from './code-projects/code-projects.component';
 import { PhotoProjectsComponent } from './photo-projects/photo-projects.component';
 import { VideoProjectsComponent } from './video-projects/video-projects.component';
+import { PhotoMenuComponent } from './main-content/photo-menu/photo-menu.component';
+import { VideoMenuComponent } from './main-content/video-menu/video-menu.component';
+import { CodeMenuComponent } from './main-content/code-menu/code-menu.component';
+import { ContactMenuComponent } from './main-content/contact-menu/contact-menu.component';
+
+
 
 @NgModule({
   declarations: [
@@ -21,11 +27,14 @@ import { VideoProjectsComponent } from './video-projects/video-projects.componen
     CodeProjectsComponent,
     EmbededVideoComponent,
     MainContentComponent,
-    CodeProjectsComponent
+    PhotoMenuComponent,
+    VideoMenuComponent,
+    CodeMenuComponent,
+    ContactMenuComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
