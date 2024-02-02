@@ -1,46 +1,27 @@
 <div class="main-content"  [class.dark-mode]="isDarkMode" [class.light-mode]="!isDarkMode">
 	<aside class="sidebar">
-		<ul>
-		  <li><a routerLink="/exhibition">Exhibition</a></li>
-		  <li><a routerLink="/works">Works</a></li>
-		  <li><a routerLink="/news">News</a></li>
+		<ul class="sidebar-list">
+		  <li class="sidebar-list-item"><a routerLink="/photography" class="sidebar-link">Photography</a></li>
+		  <li class="sidebar-list-item"><a routerLink="/video" class="sidebar-link">Video</a></li>
+		  <li class="sidebar-list-item"><a routerLink="/code-projects" class="sidebar-link">Code</a></li>
 		</ul>
-		<button class="mode-btn" (click)="toggleTheme()" [class.dark-mode]="isDarkMode" [class.light-mode]="!isDarkMode">
-			<span class="checkbox"></span>
-			{{ isDarkMode ? 'Light Mode' : 'Dark Mode' }}
-		  </button>
+		<div class="tnc-title">The Natue Of Chaos</div>
+		<div class="sidebar-btns">
+			<button class="mode-btn" (click)="toggleTheme()" [class.dark-mode]="isDarkMode" [class.light-mode]="!isDarkMode">
+				<span class="checkbox"></span>
+				{{ isDarkMode ? 'Light Mode' : 'Dark Mode' }}
+			</button>
+			<!-- TO DO -->
+			<button class="mode-btn mono-btn" (click)="toggleMono()" [class.default]="!isMono" [class.mono-space]="isMono">
+				<span class="checkbox"></span>
+				Mono-space
+			</button>
+		</div>
 	</aside>
 	<div class="main-menu" #mainMenu>
- <!-- Photography Menu -->
-	<section class="menu-grid photography-menu" *ngIf="menus[0].isActive">
-		<div class="menu-title">{{ menus[0].title }}</div>
-		<div class="grid-items">
-		<div class="grid-item" *ngFor="let item of menus[0].items">
-			<img [src]="item.image" [alt]="item.title">
-			<div class="title">{{ item.title }}</div>
-			<div class="year">{{ item.year }}</div>
-		</div>
-		</div>
-	</section>	
-	<section class="menu-grid video-menu" *ngIf="menus[1].isActive">
-		<div class="menu-title">{{ menus[1].title }}</div>
-		<div class="grid-items">
-		<div class="grid-item" *ngFor="let item of menus[1].items">
-			<img [src]="item.image" [alt]="item.title">
-			<div class="title">{{ item.title }}</div>
-			<div class="year">{{ item.year }}</div>
-		</div>
-		</div>
-	</section>	
-	<section class="menu-grid code-menu" *ngIf="menus[2].isActive">
-		<div class="menu-title">{{ menus[2].title }}</div>
-		<div class="grid-items">
-		<div class="grid-item" *ngFor="let item of menus[2].items">
-			<img [src]="item.image" [alt]="item.title">
-			<div class="title">{{ item.title }}</div>
-			<div class="year">{{ item.year }}</div>
-		</div>
-		</div>
-	</section>	
+		<app-photo-menu [menu]="menus[0]" *ngIf="menus[0].isActive" [isDarkMode]="isDarkMode"></app-photo-menu>
+		<app-video-menu [menu]="menus[1]" *ngIf="menus[1].isActive"></app-video-menu>
+		<app-code-menu [menu]="menus[2]" *ngIf="menus[2].isActive"></app-code-menu>
+		<app-contact-menu [menu]="menus[3]" *ngIf="menus[3].isActive"></app-contact-menu>
 	</div>
 </div>

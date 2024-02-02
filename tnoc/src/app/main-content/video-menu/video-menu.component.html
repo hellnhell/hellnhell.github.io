@@ -1,0 +1,24 @@
+<div class="menu-container">
+  <section class="menu-grid video-menu">
+    <div class="menu-title">
+      <span><strong>{{ menu?.title }}</strong></span>
+      <span><strong>{{ menu?.number }}</strong></span>
+    </div>
+    <div class="content-container">
+      <div class="video-player-container">
+        <video controls [src]="selectedVideo.video" *ngIf="selectedVideo">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="video-list-container">
+        <div *ngFor="let item of menu?.items" (click)="selectVideo(item)" class="video-items">
+          <div class="title">{{ item.title }}</div>
+        </div>
+      </div>
+      <div class="menu-sidebar" routerLink="/video"> 
+        <span> >> </span>
+        <div class="tooltip">Video Index</div>
+      </div>
+    </div>
+  </section>
+</div>

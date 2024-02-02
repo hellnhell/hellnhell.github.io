@@ -1,5 +1,6 @@
 import { Component, ElementRef, EventEmitter, HostListener, OnInit, Output, ViewChild } from '@angular/core';
 import * as p5 from 'p5';
+import { menus } from './models';
 
 @Component({
   selector: 'app-main-content',
@@ -23,75 +24,8 @@ export class MainContentComponent implements OnInit {
   }
 
   isDarkMode = true;
-  menus = [
-    {
-      title: 'Photography',
-      isActive: true,
-      items: [
-        {
-          title: '#treeoflife',
-          year: '2022',
-          dimensions: 'Φ720',
-          image: '/assets/imgs/bollers2.JPG',
-        },
-        {
-          title: '#landscape',
-          year: '2022',
-          dimensions: 'Φ720',
-          image: '/assets/imgs/bollers2.JPG',
-        },
-        {
-          title: '#treeoflife',
-          year: '2022',
-          dimensions: 'Φ720',
-          image: '/assets/imgs/bollers2.JPG',
-        },
-        {
-          title: '#landscape',
-          year: '2022',
-          dimensions: 'Φ720',
-          image: '/assets/imgs/bollers2.JPG',
-        },
-      ],
-    },
-    {
-      title: 'Video',
-      isActive: true,
-      items: [
-        {
-          title: '#treeoflife',
-          year: '2022',
-          dimensions: 'Φ720',
-          image: '/assets/imgs/bollers2.JPG',
-        },
-        {
-          title: '#landscape',
-          year: '2022',
-          dimensions: 'Φ720',
-          image: '/assets/imgs/bollers2.JPG',
-        },
-      ],
-    },
-    {
-      title: 'Coding projects',
-      isActive: true,
-      items: [
-        {
-          title: '#treeoflife',
-          year: '2022',
-          dimensions: 'Φ720',
-          image: '/assets/imgs/bollers2.JPG',
-        },
-        {
-          title: '#landscape',
-          year: '2022',
-          dimensions: 'Φ720',
-          image: '/assets/imgs/bollers2.JPG',
-        },
-      ],
-    },
-    // ... other menus
-  ];
+  isMono = false;
+  menus = menus;
 
   constructor() { }
 
@@ -101,5 +35,8 @@ export class MainContentComponent implements OnInit {
   toggleTheme() {
     this.isDarkMode = !this.isDarkMode;
     this.themeToggle.emit();
+  }
+  toggleMono() {
+    this.isMono = !this.isMono;
   }
 }
