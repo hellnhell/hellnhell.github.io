@@ -25,6 +25,7 @@ export class AppComponent {
       });
     }
   }
+  
   onMainComponentScroll(scrollPos: number) {
     const movementFactor = 0.02;
     const movement = scrollPos * movementFactor;
