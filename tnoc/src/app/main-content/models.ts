@@ -62,35 +62,35 @@ export const menus: Menu[] = [
     items: [
 			{
 				title: 'MYLAR SOCIALS',
-				video: '/assets/imgs/MYLAR_Socials_5.mp4',
+				video: '/assets/vids/MYLAR_Socials_5.mp4',
         videoCategory: 'MYLAR'
 			},
       {
 				title: 'MYLAR SOCIALS',
-				video: '/assets/imgs/MYLAR_Socials_3.mp4',
+				video: '/assets/vids/MYLAR_Socials_3.mp4',
         videoCategory: 'MYLAR'
 			},
       {
 				title: 'MYLAR SOCIALS',
-				video: '/assets/imgs/MYLAR_Socials_4.mp4',
+				video: '/assets/vids/MYLAR_Socials_4.mp4',
         videoCategory: 'MYLAR'
 			},
 			{
 				title: 'WILD PONY FW',
 				year: '2022',
-				video: '/assets/imgs/FULL_1_BN.mp4',
+				video: '/assets/vids/FULL_1_BN.mp4',
         videoCategory: 'Wild Pony' 
 			},
 			{
 				title: 'WILD PONY ECOMMERCE ',
 				year: '2022',
-				video: '/assets/imgs/WP_1.mp4',
+				video: '/assets/vids/WP_1.mp4',
         videoCategory: 'Wild Pony'
 			},
 			{
 				title: 'LE BAIN SOCIALS',
 				year: '2022',
-				video: '/assets/imgs/Test_bot_wb.mp4',
+				video: '/assets/vids/Test_bot_wb.mp4',
         videoCategory: 'Le Bain'
 			},
     ],

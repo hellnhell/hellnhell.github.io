@@ -1,31 +1,46 @@
-<div class="main-content"  [class.dark-mode]="isDarkMode" [class.light-mode]="!isDarkMode">
-	<aside class="sidebar">
-		<ul class="sidebar-list">
-		  <li class="sidebar-list-item"><a routerLink="/photography" class="sidebar-link">Photography</a></li>
-		  <li class="sidebar-list-item"><a routerLink="/video" class="sidebar-link">Video</a></li>
-		  <li class="sidebar-list-item"><a routerLink="/code-projects" class="sidebar-link">Code</a></li>
-		</ul>
-		<div class="tnc-title">
-			<span>
-				The Natue Of Chaos
-			</span>
+<div class="border-box" [class.dark-mode]="isDarkMode" [class.light-mode]="!isDarkMode">
+	<div class="border-text border-text-left">THE NATURE OF CHAOS</div>
+	<div class="border-text border-text-top">This is a basic portfolio hosted on a free platform, it will always be under construction.</div>
+	<div class="border-text border-text-right">THE NATURE OF CHAOS</div>
+	<div class="border-text border-text-bottom"><strong>PIECES AND CODE BY ME © 2021 Hellnhell</strong></div>
+	<div class="main-content">
+		<div class="main-menu" #mainMenu>
+			<app-photo-menu [menu]="menus[0]" *ngIf="menus[0].isActive" [isDarkMode]="isDarkMode"></app-photo-menu>
+			<app-video-menu [menu]="menus[1]" *ngIf="menus[1].isActive"></app-video-menu>
+			<app-code-menu [menu]="menus[2]" *ngIf="menus[2].isActive"></app-code-menu>
+			<app-contact-menu [menu]="menus[3]" *ngIf="menus[3].isActive"></app-contact-menu>
 		</div>
 		<div class="sidebar-btns">
 			<button class="mode-btn" (click)="toggleTheme()" [class.dark-mode]="isDarkMode" [class.light-mode]="!isDarkMode">
 				<span class="checkbox"></span>
 				{{ isDarkMode ? 'Light Mode' : 'Dark Mode' }}
 			</button>
-			<!-- TO DO -->
 			<button class="mode-btn mono-btn" (click)="toggleMono()" [class.default]="!isMono" [class.mono-space]="isMono">
 				<span class="checkbox"></span>
 				Mono-space
 			</button>
 		</div>
-	</aside>
-	<div class="main-menu" #mainMenu>
-		<app-photo-menu [menu]="menus[0]" *ngIf="menus[0].isActive" [isDarkMode]="isDarkMode"></app-photo-menu>
-		<app-video-menu [menu]="menus[1]" *ngIf="menus[1].isActive"></app-video-menu>
-		<app-code-menu [menu]="menus[2]" *ngIf="menus[2].isActive"></app-code-menu>
-		<app-contact-menu [menu]="menus[3]" *ngIf="menus[3].isActive"></app-contact-menu>
 	</div>
 </div>
+<!-- <aside class="sidebar">
+<ul class="sidebar-list">
+  <li class="sidebar-list-item"><a routerLink="/photography" class="sidebar-link">Photography</a></li>
+  <li class="sidebar-list-item"><a routerLink="/video" class="sidebar-link">Video</a></li>
+  <li class="sidebar-list-item"><a routerLink="/code-projects" class="sidebar-link">Code</a></li>
+</ul>
+<div class="tnc-title">
+	<span>
+		The Natue Of Chaos
+	</span>
+</div>
+<div class="sidebar-btns">
+	<button class="mode-btn" (click)="toggleTheme()" [class.dark-mode]="isDarkMode" [class.light-mode]="!isDarkMode">
+		<span class="checkbox"></span>
+		{{ isDarkMode ? 'Light Mode' : 'Dark Mode' }}
+	</button>
+	<button class="mode-btn mono-btn" (click)="toggleMono()" [class.default]="!isMono" [class.mono-space]="isMono">
+		<span class="checkbox"></span>
+		Mono-space
+	</button>
+</div>
+</aside> -->
