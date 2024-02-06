@@ -6,6 +6,7 @@ node_modules
 
 # Ignore images
 imgs
+vids
 
 # Ignore all text files
 *.txt
