@@ -1,0 +1,146 @@
+.border-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  color: black;
+  font-weight: bold;
+  z-index: 9;
+  overflow: hidden;
+  .border-text {
+    position: fixed;
+    writing-mode: vertical-rl;
+    white-space: nowrap;
+    overflow: hidden;
+    user-select: none;
+    pointer-events: none;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+  .border-text-left {
+    height: calc(100% - 70px);
+    top: 35px;    
+    transform: rotate(180deg);
+    border-left: 1px solid black;
+  }
+  
+  .border-text-top {
+    width: calc(100% - 70px);
+    left: 35px;
+    writing-mode: horizontal-tb;
+    border-bottom: 1px solid black;
+  }
+  
+  .border-text-right {
+    height: calc(100% - 70px);
+    top: 35px;
+    right: 0;   
+    transform: rotate(0deg);
+    border-left: 1px solid black;
+
+  }
+  
+  .border-text-bottom {
+    width: calc(100% - 70px);
+    left: 35px;
+    bottom: 0;
+    writing-mode: horizontal-tb;
+    color: rgba(173, 0, 0, 0.61);
+    border-top: 1px solid black;
+  }
+
+  .main-content {
+    margin: 20px auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    align-items: center;
+  
+    .main-menu {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      scroll-snap-type: x mandatory;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      overflow-x: auto;
+      gap: 30%;
+      padding: 35px 50px;
+      width: calc(100% - 70px); 
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      app-photo-menu, app-video-menu, app-code-menu, app-contact-menu {
+        flex: 1 1 auto;
+        min-width: 40%;
+      }
+    }
+
+    .sidebar-btns{
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+      padding: 10px 0;
+      color: #fff;
+      .mode-btn {
+        padding-top: 10px;
+        padding-right: 20px;
+        border: none;
+        cursor: pointer;
+        background: none;
+        color: inherit;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transition: color 0.3s;
+        .checkbox {
+          width: 10px;
+          height: 10px;
+          border: 2px solid currentColor;
+          display: inline-block;
+          background-color: white;
+        }
+      }
+      .mono-btn.mono-space {
+        font-family: monospace;
+      }
+    }
+  }
+  
+}
+.border-box.light-mode {  
+  .border-text {
+    color: white; 
+    border-color: #ddd;
+  }
+  
+  .border-text-bottom {
+    color: rgba(173, 0, 0, 0.61);
+  }
+  .main-content {    
+    .sidebar-btns .mode-btn {
+      color: #000;
+      .checkbox {
+        background-color: black;
+      }
+    }
+  }
+  
+  .border-box.mono-space {
+    font-family: monospace !important;
+      .tnc-title{
+        font-family: monospace !important;
+    }
+  }
+}
+  
+  
+
