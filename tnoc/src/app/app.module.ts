@@ -14,6 +14,9 @@ import { PhotoMenuComponent } from './main-content/photo-menu/photo-menu.compone
 import { VideoMenuComponent } from './main-content/video-menu/video-menu.component';
 import { CodeMenuComponent } from './main-content/code-menu/code-menu.component';
 import { ContactMenuComponent } from './main-content/contact-menu/contact-menu.component';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -35,6 +38,9 @@ import { ContactMenuComponent } from './main-content/contact-menu/contact-menu.c
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatTooltipModule,
+    MatExpansionModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
