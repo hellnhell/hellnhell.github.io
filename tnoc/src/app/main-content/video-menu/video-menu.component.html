@@ -11,13 +11,23 @@
         </video>
       </div>
       <div class="video-list-container">
-        <div *ngFor="let item of menu?.items" (click)="selectVideo(item)" class="video-items">
-          <div class="title">{{ item.title }}</div>
-        </div>
+        <mat-accordion >
+          <mat-expansion-panel *ngFor="let category of categories | keyvalue" (opened)="panelOpenState = true"
+          (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                {{ category.key }}
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div *ngFor="let video of category.value" (click)="selectVideo(video)" class="video-item">
+              <div>{{ video.title }}</div>
+            </div>
+          </mat-expansion-panel>
+        </mat-accordion>
       </div>
-      <div class="menu-sidebar" routerLink="/video"> 
+      <div class="menu-sidebar" routerLink="/video" matTooltip="Video Index"> 
         <span> >> </span>
-        <div class="tooltip">Video Index</div>
+        
       </div>
     </div>
   </section>

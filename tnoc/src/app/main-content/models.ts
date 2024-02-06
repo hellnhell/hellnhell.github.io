@@ -1,9 +1,9 @@
 export interface MenuItem {
   title: string;
-  year: string;
-  dimensions?: string;
+  year?: string;
   image?: string;
   video?: string;
+  videoCategory?: string;
 }
 
 export interface Menu {
@@ -22,37 +22,35 @@ export const menus: Menu[] = [
       {
         title: '#treeoflife',
         year: '2022',
-        dimensions: 'Φ720',
         image: '/assets/imgs/bollers2.JPG',
       },
       {
         title: '#landscape',
         year: '2022',
-        dimensions: 'Φ720',
         image: '/assets/imgs/bollers2.JPG',
       },
       {
         title: '#treeoflife',
         year: '2022',
-        dimensions: 'Φ720',
+
         image: '/assets/imgs/bollers2.JPG',
       },
       {
         title: '#landscape',
         year: '2022',
-        dimensions: 'Φ720',
+
         image: '/assets/imgs/bollers2.JPG',
       },
       {
         title: '#treeoflife',
         year: '2022',
-        dimensions: 'Φ720',
+
         image: '/assets/imgs/bollers2.JPG',
       },
       {
         title: '#treeoflife',
         year: '2022',
-        dimensions: 'Φ720',
+
         image: '/assets/imgs/bollers2.JPG',
       },
     ],
@@ -64,23 +62,36 @@ export const menus: Menu[] = [
     items: [
 			{
 				title: 'MYLAR SOCIALS',
-				year: '2022',
 				video: '/assets/imgs/MYLAR_Socials_5.mp4',
+        videoCategory: 'MYLAR'
+			},
+      {
+				title: 'MYLAR SOCIALS',
+				video: '/assets/imgs/MYLAR_Socials_3.mp4',
+        videoCategory: 'MYLAR'
+			},
+      {
+				title: 'MYLAR SOCIALS',
+				video: '/assets/imgs/MYLAR_Socials_4.mp4',
+        videoCategory: 'MYLAR'
 			},
 			{
 				title: 'WILD PONY FW',
 				year: '2022',
 				video: '/assets/imgs/FULL_1_BN.mp4',
+        videoCategory: 'Wild Pony' 
 			},
 			{
 				title: 'WILD PONY ECOMMERCE ',
 				year: '2022',
 				video: '/assets/imgs/WP_1.mp4',
+        videoCategory: 'Wild Pony'
 			},
 			{
 				title: 'LE BAIN SOCIALS',
 				year: '2022',
 				video: '/assets/imgs/Test_bot_wb.mp4',
+        videoCategory: 'Le Bain'
 			},
     ],
   },
@@ -92,13 +103,11 @@ export const menus: Menu[] = [
 		{
 			title: '#treeoflife',
 			year: '2022',
-			dimensions: 'Φ720',
 			image: '/assets/imgs/bollers2.JPG',
 		  },
 		  {
 			title: '#landscape',
 			year: '2022',
-			dimensions: 'Φ720',
 			image: '/assets/imgs/bollers2.JPG',
 		  },
     ],
@@ -111,13 +120,11 @@ export const menus: Menu[] = [
 		{
 			title: '#treeoflife',
 			year: '2022',
-			dimensions: 'Φ720',
 			image: '/assets/imgs/bollers2.JPG',
 		  },
 		  {
 			title: '#landscape',
 			year: '2022',
-			dimensions: 'Φ720',
 			image: '/assets/imgs/bollers2.JPG',
 		  },
     ],
