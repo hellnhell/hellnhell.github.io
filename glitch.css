@@ -1,0 +1,83 @@
+.tnc-glitch {
+    transform: translate(-1%, -1%);
+    font-size: 4rem;
+    text-decoration: none;
+    font-weight: 700;
+}
+.tnc-glitch:before, .tnc-glitch:after {
+    content: 'The Nature Of Chaos';
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+  
+.tnc-glitch:before {
+    color: black;
+    z-index: -1;
+}
+.tnc-glitch:after {
+    color: red;
+    z-index: -2;
+}
+.tnc-glitch:hover:before {
+    animation: glitch 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+}
+.tnc-glitch:hover:after {
+    animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+}
+
+.cos-glitch {
+    transform: translate(-1%, -1%);
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: 300;
+    padding-top: 5% ;
+    padding-left: 20%;
+}
+
+
+.cos-glitch:before {
+    color: black;
+    z-index: -1;
+}
+.cos-glitch:after {
+    color: red;
+    z-index: -2;
+}
+.cos-glitch:hover:before {
+    animation: glitch 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+}
+.cos-glitch:hover:after {
+    animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+}
+
+
+
+@keyframes glitch {
+    0% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+   }
+    10% {
+        -webkit-transform: translate(-1px, 1px);
+        transform: translate(-1px, 1px);
+        transform: skewX(5ndeg);
+   }
+    20% {
+        -webkit-transform: translate(-1px, -1px);
+        transform: translate(-1px, -1px);
+   }
+    30% {
+        -webkit-transform: translate(1px, 1px);
+        transform: translate(1px, 1px);
+   }
+    40% {
+        -webkit-transform: translate(1px, -1px);
+        transform: translate(1px, -1px);
+   }
+    to {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+   }
+}

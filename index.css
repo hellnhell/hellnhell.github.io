@@ -1,0 +1,573 @@
+*,*:before,*:after {
+  box-sizing:inherit;
+  margin:0;
+  padding:0;
+  border:0 none;
+  position: relative;
+}
+
+html {
+  box-sizing:border-box;
+  font-family: monospace; 
+  scroll-behavior: smooth;
+}
+
+ol, ul, a {
+	list-style: none;
+  text-decoration: none;
+}
+
+#cover {
+  width: 100%;
+  height: 100%;
+  object-fit:fill; 
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  filter:hue-rotate(180deg) brightness(1) invert();
+}
+
+#cover video{
+  width: 100%;
+  height:100vh;
+  object-fit: cover;
+
+}
+
+.container {
+  z-index: 1;
+  height: 100vh;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: white; */
+  /* filter: invert() ; */
+  
+}
+
+
+.container-des {
+  font-size: 1.5rem;
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  bottom: 2; 
+  right: 0;
+  color: white;
+  padding: 5%;
+
+}
+
+.container-des p {
+  font-size: 2rem; 
+  /* margin-top: 20%; */
+   height: 30%;
+}
+
+.photo-content {
+  scroll-behavior: smooth;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  scroll-behavior: smooth;
+  padding: 2%;
+  margin-top: 10%;
+}
+
+
+@media only screen and (min-width: 320px) {
+
+    .photo-content img{
+      width: 100%;
+      padding-top: 5%;
+    }
+
+    .photo-content video{
+      width: 100%;
+      padding-top: 5%;
+    }
+
+
+    .gallery-women-dus img {
+      filter: opacity(0.8) brightness(2) ;
+    }
+
+    .gallery-wp {
+      min-width: 100%;
+      min-height: 100%;
+      margin-bottom: 10%;
+    }
+
+    .gallery-wp video {
+      width: 100%;
+      height: 100%;
+    }
+  
+    
+    .gallery-aritz-sketch .ul-aritz {
+      display: none;
+    }
+    .gallery-aritz-sketch {
+      filter: invert();
+    }
+
+    .gallery-hefestion {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      /* margin: 5% 0 5%; */
+      /* background-image: url("imgs/HEFES.png");
+      background-repeat:repeat;
+       background-size: contain; */
+       margin-bottom: 5%;
+      /*background-position-x: left 10%; */
+    }
+
+    .gallery-hf-vid {
+      width: 100%;
+    }
+
+    .gallery-highxt {
+      width: 80%;
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 10%;
+      /* margin-bottom: 5%; */
+    }
+
+    .gallery-highxt iframe{
+      width: 100%;
+      height: 100%; 
+    }
+
+    /* .gallery-sun {
+      height: 100%;
+    } */
+    .gallery-sun .gallery-sun-vid {
+      display: none;
+    }
+
+    .gallery-lb {
+      display: flex;
+      flex-direction: column;
+      margin-top: 15%;
+    }
+    
+    .gallery-lb .gallery-lb-title{
+      margin: 5% 2% 15% 0;
+      font-size: 1.2rem;
+      color: white;
+    }
+
+    .gallery-nonbin {
+      display: flex;
+      width: 100%;
+      height: 50%;
+      margin-top: 10%;
+
+    }
+
+    .gallery-nonbin a {
+      text-decoration: none;
+      font-size: 0.8rem;
+    }
+  
+    .gallery-nonbin .gallery__tex--1{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      color: white;
+      padding: 20% 10%;
+    }
+  
+    .gallery-nonbin .gallery__tex--1:hover{
+      background-color: transparent;
+      color: black;
+    }
+
+
+    .gallery-9 { 
+      display: flex;
+      width: 100%;
+      height: 150vh;
+      background-image: url("imgs/cruz.png");
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    
+    .gallery-lb-title {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        align-content: center;
+        justify-content: center;
+        font-size: 1.5rem;
+    }
+    
+    .gallery-lb-title h3 {
+        width: 100%;
+    }
+    .gallery-lb-title p {
+      width: 100%;
+      /* visibility: hidden; */
+    }
+
+    .gallery-dusman {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .gallery-dusman  img{
+        width: 45%;
+    }
+
+    .gallery-dusman-1{
+      display: none;
+    }
+   
+    .gallery-sign {
+      width: 100%;
+      height: 20%;
+      margin-left: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .gallery-sign p{
+      width: 100%;
+    }
+
+    .footer {
+      display: none;
+    }
+
+    .gallery-cub3d video{
+      height: 100%;
+    }
+
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+  .container-des {
+    font-size: 2rem;
+    padding-left: 5%;
+  }
+
+
+  .gallery-women-dus{
+    display: flex;
+    height: 120%;
+    align-content: center;
+    margin-bottom: 10%;
+  }
+  .gallery-women-dus img{
+    height: 100%;
+    width: 100%;
+    padding: 1%;
+  }
+
+  .gallery-cub3d {
+    display: flex;
+    height: 100%;
+    margin-bottom: 10%;
+  }
+
+  .gallery-cub3d video:hover{
+    cursor: pointer;
+  }
+
+  .gallery-wp {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 80%;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .gallery-wp div{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+  .gallery-wp .big {
+    width: 20%;
+  }
+  .gallery-wp div video {
+    width: 15%;
+  }
+
+  .gallery-wp  #alone{
+    width: 30%;
+  }
+
+  .gallery-fag {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+    margin-bottom: 10%;
+  }
+  
+  .gallery-fag div{
+    position: absolute;
+    width: 20%;
+
+  }
+  .gallery-fag  .gallery-fag-img {
+    left: 5%;
+  }
+
+  .gallery-fag  .gallery-walker-rodin {
+    left: 42%;
+  }
+
+  .gallery-fag  .gallery-cubic-build{
+    left: 60%;
+    top: 30%;
+    z-index: 1;
+  }
+
+  .gallery-fag  .gallery-hanged {
+    left: 75%;
+    top: -5%;
+  }
+
+  .gallery-aritz-sketch {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10%;
+  }
+
+  .gallery-aritz-sketch .ul-aritz {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 15px;
+    list-style-type: none;
+  }
+
+  .li-artiz{
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .gallery-aritz-sketch a{
+    width: 100%;
+  }
+
+  .gallery-aritz-sketch video{
+    width: 100%;
+  }
+
+  .gallery-aritz-sketch li .tx-aritz{
+    display: none;
+  }
+  .gallery-aritz-sketch li:hover a{
+    visibility: collapse;
+  }
+
+  .gallery-aritz-sketch li:hover .tx-aritz{
+    display: flex;
+    width: 100%;
+    font-size: 1.8rem;
+    color: rgb(0, 195, 255);
+    position: absolute;
+    cursor: default;
+    top: 50%;
+  }
+
+  #resp-aritz{
+    display: none;
+  }
+
+  
+  .gallery-hefestion {
+    height: 100vh;
+    background-size: 39%;
+    margin-top: 5%;
+  }
+  .gallery-hf-vid {
+    padding: 45.00% 0 0 0 !important;
+  }
+
+  .gallery-highxt iframe {
+    height: 100%;
+    margin-top: 5%;
+  }
+
+
+  .gallery-sun {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+  }
+  .gallery-sun .gallery-sun-vid {
+    display: block;
+    width: 30%;
+  }
+
+  .gallery-sun .gallery-sun-img {
+    width: 30%;
+  }
+
+  .gallery-lb {
+    flex-direction: row;
+    align-items: center;
+    height: 70%;
+  }
+  
+  .gallery-lb .gallery-lb-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 0 0 0;
+    text-align: center;
+    line-height: 2;
+    font-size: 1.5rem;
+    padding: 3%;
+  }
+
+  .gallery-lb-vids {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+
+  }
+  .gallery-lb video{
+    width: 25%;
+  }
+
+  .gallery-nonbin{
+    height: 100%;
+    font-size: 3rem;
+  }
+  .gallery-nonbin a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    line-height: 2;
+  }
+
+  .gallery-grua {
+    width: 100%;
+    height: 100vh;
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .gallery-grua .gallery-grua-vid{
+    width: 30%;
+    position: absolute;
+    left: 10%;
+    top: 0;
+  }
+
+  .gallery-grua img {
+    width: 20%;
+    position: absolute;
+  }
+
+  .gallery-grua .gallery-grua-window-img{
+    top: -10%;
+    right: 10%;;
+  }
+
+  .gallery-grua .gallery-grua-ciu-img{
+    bottom: -10%;
+    right: 10%;
+    width: 25%;
+  }
+
+  .gallery-juncos{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-top: 15%;
+  }
+
+  
+  .gallery-dusman-1{
+    display: block;
+  }
+
+  .gallery-dusman {
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+  }
+
+  .gallery-dusman  img{
+      width: 20%;
+  }
+
+  .gallery-lovers {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .gallery-lovers video {
+    width: 35%;
+    padding-left: 1%;
+  }
+
+  .gallery-sign {
+    height: 40%;
+  }
+
+  
+  .footer {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+    margin-top: 2%;
+    opacity: 0.5;
+  }
+
+
+}

@@ -1,0 +1,165 @@
+/* 
+.gallery-links {
+     width: 100%;
+     margin-top: 35%;
+     justify-content: space-around;
+     padding-left: 10%;
+    } */
+
+div #quad { 
+  margin-left: 1.2rem;
+  font-family: 'New Tegomin', serif;
+  font-size: 0;
+  width: 95%; 
+  height: 50%;
+  display: inline-flex; 
+}
+div #quad figure { 
+  width: 35%;
+  padding: 0.3rem;
+  height: auto;
+  transition: 1s; 
+  position: relative;
+  overflow: hidden; 
+}
+div #quad figure:hover { cursor: pointer; z-index: 4; }
+div #quad figure img { 
+    width: 50%;
+    overflow-y: hidden;
+    padding: 0.2rem;
+}
+div #quad figure video {
+    width: 300px;
+    height: 800px;
+    padding: 0.2rem;
+    overflow-y: hidden;
+
+}
+ video #meh{
+    cursor: url('imgs/hefestion-min.png');
+ }
+
+div #quad figure:nth-child(1) { transform-origin: top left; }
+div #quad figure:nth-child(2) { transform-origin: top ; }
+div #quad figure:nth-child(3) { transform-origin: top ; }
+div #quad figure:nth-child(3) { transform-origin: top right; }
+div #quad figure figcaption { 
+  opacity: 0; 
+  background:#fff; 
+  color:#000;
+  padding: .2rem;
+  text-align: center;
+  font-size: 1.2rem; 
+  position: absolute; 
+  top: 40%;
+  width: 60%;
+  transition: 0.5s 0.5s opacity; 
+}
+.expanded { transform: scale(1.5); z-index: 5;  }
+div #quad figure.expanded figcaption { opacity: 1; }
+div.full figure:not(.expanded) { pointer-events: none; }
+
+
+/* .gallery-links ul {
+    display: grid;
+    grid-template-columns: repeat(2, 50% [col-start]);
+    grid-template-rows: repeat(2, 30% [line-start]);
+    height: 10vh;
+    max-width: 90%;
+    font-size: 0.95rem;
+    font-weight: 1.2rem;
+    line-height: 3rem;
+    text-decoration: none;
+}
+
+.img1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: row1-start;
+    grid-row-end: 2;
+    position: absolute;
+    width: 20%;
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+    -webkit-transition: .2s;
+    transition: .2s;
+    margin-top: 5%;
+    margin-left: 10%;
+}
+
+.img1:hover{
+	-webkit-filter: blur(0);
+	filter: blur(0);
+}
+
+.img2 {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    position: absolute;
+    width: 20%;
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+.img3 {
+    grid-column-start: 0;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    position: absolute;
+    width: 20%;
+    align-self: stretch;
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+    -webkit-transition: .2s;
+    transition: .2s;
+    margin-top: 35%;
+    margin-left: 25%;
+}
+
+
+.img4 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    position: absolute;
+    width: 20%;
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+    -webkit-transition: .2s;
+    transition: .2s;
+    margin-top: 25%;
+    margin-left: 25%;
+}
+
+.title-1{
+    position: relative;
+    top: 10%;
+    left: 10%;
+    text-decoration: none;
+    background-color: white; 
+    color: black;
+    padding: 0.3rem;
+    visibility: hidden;
+}
+
+.gallery-links li:hover .title-1 {
+    visibility: visible;
+    transition: 1s;
+}
+
+
+.gallery-links ul li:nth-of-type(2) {
+ 
+}
+
+.gallery-links ul li:nth-of-type(3) {
+    margin-top: 10%;
+    margin-left: 60%;
+}
+
+.gallery-links ul li:nth-of-type(4) {
+    margin-top: 10%;
+    margin-left: 10%;
+} */
