@@ -27,25 +27,41 @@ export const menus: Menu[] = [
       {
         title: '#landscape',
         year: '2022',
+<<<<<<< HEAD
         image: '/assets/imgs/glove_2.jpg',
+=======
+        image: '/assets/imgs/bollers2.JPG',
+>>>>>>> c7b25aa45666e519c7c18f241b47ca5bd04c2361
       },
       {
         title: '#treeoflife',
         year: '2022',
 
+<<<<<<< HEAD
         image: '/assets/imgs/rodin_walker.png',
+=======
+        image: '/assets/imgs/bollers2.JPG',
+>>>>>>> c7b25aa45666e519c7c18f241b47ca5bd04c2361
       },
       {
         title: '#landscape',
         year: '2022',
 
+<<<<<<< HEAD
         image: '/assets/imgs/cruz.png',
+=======
+        image: '/assets/imgs/bollers2.JPG',
+>>>>>>> c7b25aa45666e519c7c18f241b47ca5bd04c2361
       },
       {
         title: '#treeoflife',
         year: '2022',
 
+<<<<<<< HEAD
         image: '/assets/imgs/cubic_buildin.png',
+=======
+        image: '/assets/imgs/bollers2.JPG',
+>>>>>>> c7b25aa45666e519c7c18f241b47ca5bd04c2361
       },
       {
         title: '#treeoflife',

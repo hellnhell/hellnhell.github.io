@@ -6,14 +6,28 @@
 		</div>
 		<div class="content-container">
 			<div class="grid-items">
+<<<<<<< HEAD
 				<div class="grid-item" *ngIf="randomImage">
 					<img [src]="randomImage.image" loading="lazy" [alt]="randomImage.title">
 				</div>
 			</div>
 			<div class="menu-sidebar" routerLink="/photography">
+=======
+				<div class="grid-item" *ngFor="let item of menu?.items">
+					<img [src]="item.image" [alt]="item.title">
+					<div class="title">{{ item.title }}</div>
+					<div class="year">{{ item.year }}</div>
+				</div>
+			</div>
+			<div class="menu-sidebar" routerLink="/photography"> 
+>>>>>>> c7b25aa45666e519c7c18f241b47ca5bd04c2361
 				<span> >> </span>
 				<div class="tooltip">Photography Index</div>
 			</div>
 		</div>
 	</section>
+<<<<<<< HEAD
 </div>
+=======
+</div>
+>>>>>>> c7b25aa45666e519c7c18f241b47ca5bd04c2361
