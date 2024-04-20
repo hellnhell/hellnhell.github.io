@@ -20,44 +20,36 @@
     justify-content: center;
     padding: 10px;
   }
+
   .border-text-left {
-    height: calc(100% - 70px);
-    top: 35px;    
+    display: flex;
+    height: 100%;
     transform: rotate(180deg);
     border-left: 1px solid black;
+    .sidebar-btns{
+      mat-checkbox {
+        .mat-checkbox-layout {
+          .mat-checkbox-label {
+            color: #666; 
+          }
+        }
+        .mat-checkbox-frame {
+          background-color:black; 
+        }
+      
+        &.mat-checkbox-checked .mat-checkbox-background {
+          background-color: black;
+        } 
+      }
+    }
   }
-  
-  .border-text-top {
-    width: calc(100% - 70px);
-    left: 35px;
-    writing-mode: horizontal-tb;
-    border-bottom: 1px solid black;
-  }
-  
-  .border-text-right {
-    height: calc(100% - 70px);
-    top: 35px;
-    right: 0;   
-    transform: rotate(0deg);
-    border-left: 1px solid black;
-
-  }
-  
-  .border-text-bottom {
-    width: calc(100% - 70px);
-    left: 35px;
-    bottom: 0;
-    writing-mode: horizontal-tb;
-    color: rgba(173, 0, 0, 0.61);
-    border-top: 1px solid black;
-  }
+      
 
   .main-content {
-<<<<<<< HEAD
     position: absolute; 
     top: 35px; 
     bottom: 35px; 
-    left: 35px; 
+    left: 60px; 
     right: 35px; 
     display: flex;
     flex-direction: column;
@@ -65,17 +57,6 @@
     align-items: center;
     overflow: auto; 
     
-=======
-    margin: 20px auto;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-bottom: 20px;
-    align-items: center;
-  
->>>>>>> c7b25aa45666e519c7c18f241b47ca5bd04c2361
     .main-menu {
       display: flex;
       flex-direction: row;
@@ -86,152 +67,36 @@
       -ms-overflow-style: none;
       scrollbar-width: none;
       overflow-x: auto;
-      gap: 30%;
-<<<<<<< HEAD
+      gap: 15%;
       height: 100%;
       width: auto;
-      max-width: calc(100% - 2px);
+      max-width: calc(100% - 20px);
       padding: 0 45px;
       box-sizing: border-box; 
       &::-webkit-scrollbar {
         display: none;
       }
-=======
-      padding: 35px 50px;
-      width: calc(100% - 70px); 
-      &::-webkit-scrollbar {
-        display: none;
-      }
-      app-photo-menu, app-video-menu, app-code-menu, app-contact-menu {
-        flex: 1 1 auto;
-        min-width: 40%;
-      }
->>>>>>> c7b25aa45666e519c7c18f241b47ca5bd04c2361
-    }
-
-    .sidebar-btns{
-      display: flex;
-      justify-content: center;
-      align-items: center; 
-      padding: 10px 0;
-      color: #fff;
-      .mode-btn {
-<<<<<<< HEAD
-        padding: 5px 10px;
-        margin: 0 5px;
-        cursor: pointer;
-        border: 2px solid transparent;
-=======
-        padding-top: 10px;
-        padding-right: 20px;
-        border: none;
-        cursor: pointer;
->>>>>>> c7b25aa45666e519c7c18f241b47ca5bd04c2361
-        background: none;
-        color: inherit;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        transition: color 0.3s;
-        .checkbox {
-          width: 10px;
-          height: 10px;
-<<<<<<< HEAD
-          display: inline-block;
-          transition: background-color 0.3s, border-color 0.3s;
-          position: relative;
-          &::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 6px;
-            height: 6px;
-            transform: translate(-50%, -50%);
-            transition: background-color 0.3s;
-
-          }
-
-          &.checked {
-            &::after {
-              background-color: white;
-            }
-          }
-        }
-      }
-      .mono-btn {
-        .checkbox {
-          background-color: transparent; 
-          border: 2px solid white; 
-        }
-=======
-          border: 2px solid currentColor;
-          display: inline-block;
-          background-color: white;
-        }
-      }
-      .mono-btn.mono-space {
-        font-family: monospace;
->>>>>>> c7b25aa45666e519c7c18f241b47ca5bd04c2361
-      }
     }
   }
-  
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> c7b25aa45666e519c7c18f241b47ca5bd04c2361
 .border-box.light-mode {  
   .border-text {
     color: white; 
     border-color: #ddd;
   }
-<<<<<<< HEAD
-=======
-  
->>>>>>> c7b25aa45666e519c7c18f241b47ca5bd04c2361
   .border-text-bottom {
     color: rgba(173, 0, 0, 0.61);
   }
   .main-content {    
-<<<<<<< HEAD
-    .sidebar-btns{
-      .mode-btn {
-        color: #000;
-        .checkbox {
-          background-color: black;
-          &::after {
-            background-color: transparent; 
-          }
-          &.checked {
-            background-color: black; 
-            border: none; 
-
-            &::after {
-              background-color: black; 
-            }
-          }
-        }
-      } 
-      .mono-btn:not(.mono-space) .checkbox {
-        background-color: transparent; 
-        border: 2px solid black; 
-      }    
-=======
-    .sidebar-btns .mode-btn {
-      color: #000;
-      .checkbox {
-        background-color: black;
+    .sidebar-btns{     
+      .mat-checkbox-frame {
+        background-color:black; 
       }
-    }
-  }
-  
-  .border-box.mono-space {
-    font-family: monospace !important;
-      .tnc-title{
-        font-family: monospace !important;
->>>>>>> c7b25aa45666e519c7c18f241b47ca5bd04c2361
+    
+      &.mat-checkbox-checked .mat-checkbox-background {
+        background-color: black;
+      } 
     }
   }
 }

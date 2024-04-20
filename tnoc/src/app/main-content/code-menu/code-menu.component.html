@@ -1,19 +1,19 @@
-<section class="menu-grid code-menu" >
-	<div class="menu-title">
-		<span><strong>{{ menu?.title }}</strong></span>
-		<span><strong>{{menu?.number}}</strong></span>
-	</div>
-	<div class="content-container">
-		<div class="grid-items">
-			<div class="grid-item" *ngFor="let item of menu?.items">
-				<img [src]="item.image" [alt]="item.title">
-				<div class="title">{{ item.title }}</div>
-				<div class="year">{{ item.year }}</div>
+<div class="menu-container" [class.dark-mode]="isDarkMode" [class.light-mode]="!isDarkMode">
+	<section class="menu-grid code-menu">
+		<div class="menu-title">
+			<span><strong>{{ menu?.title }}</strong></span>
+			<span><strong>{{menu?.number}}</strong></span>
+		</div>
+		<div class="content-container">
+			<div class="grid-items">
+				<div class="grid-item" *ngIf="randomImage">
+					<img [src]="randomImage.image" loading="lazy" [alt]="randomImage.title">
+				</div>
+			</div>
+			<div class="menu-sidebar" routerLink="/code-projects">
+				<span> >> </span>
+				<div class="tooltip">Coding projects Index</div>
 			</div>
 		</div>
-		<div class="menu-sidebar" routerLink="/code-projects"> 
-			<span> >> </span>
-			<div class="tooltip">Coding projects Index</div>
-		</div>
-	</div>
-</section>	
+	</section>
+</div>

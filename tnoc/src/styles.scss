@@ -9,11 +9,11 @@
   padding: 0;
   border: 0 none;
   position: relative;
+  font-family: 'Cutive Mono', monospace;
 }
 
 html {
   box-sizing: border-box;
-  font-family: monospace;
   scroll-behavior: smooth;
 }
 
@@ -22,4 +22,12 @@ ul,
 a {
   list-style: none;
   text-decoration: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
 }

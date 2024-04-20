@@ -1,22 +1,20 @@
-<<<<<<< HEAD
 .menu-container {
+
 	&.dark-mode .menu-grid.photography-menu,
 	&.light-mode .menu-grid.photography-menu {
-		border: 1px solid black;
 		display: flex;
 		flex-direction: column;
-	  .menu-title {
-			border-bottom: 1px solid black;
-			background-color: transparent;
+    width: 500px; 
+
+		.menu-title {
 			padding: 10px;
 			width: 100%;
-			font-size: 18px;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			gap: 20px;
-	  }
-	  .content-container {
+		}
+
+		.content-container {
 			display: flex;
 			justify-content: center;
 			align-items: stretch;
@@ -26,23 +24,27 @@
 				flex-grow: 1;
 				justify-content: center;
 				align-items: center;
+
 				.grid-item {
 					padding: 20px;
 					width: auto;
 					max-width: 100%;
+
 					img {
 						width: auto;
-						max-height: 50vh; 
+						max-height: 50vh;
 						object-fit: cover;
 					}
 				}
 			}
+
 			.menu-sidebar {
 				display: flex;
-				flex-direction: column; 
+				flex-direction: column;
 				justify-content: flex-end;
 				padding: 10px;
 				cursor: pointer;
+
 				.tooltip {
 					display: none;
 					position: absolute;
@@ -54,47 +56,64 @@
 					padding: 5px 10px;
 					white-space: nowrap;
 				}
+
 				&:hover .tooltip {
 					display: block;
 				}
 			}
-	  }
+		}
 	}
-  
+
 	// Adjustments for dark mode
 	&.dark-mode {
-	  .menu-grid.photography-menu {
-		.menu-title,
-		.content-container {
-		  background-color: white;
+		.menu-grid.photography-menu {
+			color: white;
+			.content-container {
+				border: 1px solid white;
+				border-top: none;
+			}
+
+			.menu-title{
+				border: 1px solid white;
+			}
+
+			.menu-sidebar {
+				border-left: 1px solid white;
+				color: white;
+			}
 		}
-		.menu-sidebar {
-		  background: #000;
-		  color: white;
-		}
-	  }
 	}
-  
+
 	// Adjustments for light mode
 	&.light-mode {
-	  .menu-grid.photography-menu {
-		.menu-title {
-		  background-color: transparent;
+		.menu-grid.photography-menu {
+			color: black;
+			.content-container {
+				border: 1px solid black;
+				border-top: none;
+			}
+
+			.menu-title{
+				border: 1px solid black;
+			}
+
+			.menu-sidebar {
+				border-left: 1px solid black;
+				color: black;
+			}
 		}
-		.content-container {
-		  background-color: transparent;
-		}
-	  }
 	}
-  
+
 	@media (max-width: 768px) {
-	  .menu-grid.photography-menu {
+		.menu-grid.photography-menu {
 			.content-container {
 				flex-direction: column;
 			}
+
 			.menu-sidebar {
 				justify-content: center;
 				align-items: flex-end;
+
 				.tooltip {
 					transform: translateX(-50%) translateY(0) rotate(0);
 					left: 50%;
@@ -102,123 +121,6 @@
 					bottom: -30px;
 				}
 			}
-	  }
-	}
-  }
-  
-=======
-.menu-grid.photography-menu{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  .menu-title {
-	flex: 1;
-	display: flex;
-	justify-content: space-between; 
-	align-items: center;
-	padding: 10px;
-	width: 100%;
-	font-size: 18px;
-  }
-
-  .content-container {
-	display: flex;
-	flex-direction: row; 
-	width: 100%;
-	.grid-items {
-	  display: grid;
-	  grid-template-columns: repeat(3, 1fr); 
-	  gap: 30px; 
-	  padding: 50px;
-      overflow-y: hidden;
-	  .grid-item {
-		scroll-snap-align: start;
-		img {
-		  width: 100%;
-		  height: auto;
-		}
-		.title,
-		.year {
-		  padding: 5px;
-		}
-	  }
-	}
-	.menu-sidebar {
-	  width: 8%; 
-	  display: flex;
-	  justify-content: center;
-	  align-items: flex-end;
-	  padding: 10px;
-	  cursor: pointer;
-		.tooltip {
-			display: none;
-			position: absolute;
-			left: -20px; 
-			top: 50%;
-			transform: translateY(-50%) rotate(-90deg);
-			background-color: transparent; 
-			color:  rgba(173, 0, 0, 0.795);;
-			padding: 5px 10px;
-			white-space: nowrap;		 
-		}
-		&:hover .tooltip {
-			display: block; 
-		}  
-	}
-  }
-}
-
-.menu-container.dark-mode {
-	.menu-grid.photography-menu{
-		border: 1px solid black;
-		.menu-title {
-			border-bottom: 1px solid black; 
-			background-color: white;
-		}
-		.content-container {
-			background-color: white;
-			.grid-items {
-				border-right: 1px solid black;
-				.grid-item {
-					border: 1px solid black;
-					.title,
-					.year {
-						color: #000;
-					}
-				}
-			}
-		}
-		.menu-sidebar {
-			background: #000;
-			color: white;
 		}
 	}
 }
-  
-.menu-container.light-mode {
-	.menu-grid.photography-menu{
-		border: 1px solid black; 
-			.menu-title {
-			border-bottom: 1px solid black; 
-			background-color: transparent;
-		}
-		.content-container {
-			background-color: transparent;
-			.grid-items {
-				.grid-item {
-					border: 1px solid black;
-					.title,
-					.year {
-						color: black;
-					}
-				}
-			}
-		}
-		.menu-sidebar {
-			background: black;
-			color: white;
-		}
-	}
-}
->>>>>>> c7b25aa45666e519c7c18f241b47ca5bd04c2361

@@ -23,8 +23,7 @@ export class MainContentComponent implements OnInit {
     }
   }
 
-  isDarkMode = true;
-  isMono = false;
+  isDarkMode = false;
   menus = menus;
 
   constructor() { }
@@ -32,11 +31,10 @@ export class MainContentComponent implements OnInit {
   ngOnInit(): void {
   }  
 
-  toggleTheme() {
-    this.isDarkMode = !this.isDarkMode;
+  toggleTheme(isChecked: boolean) {
+    console.log("entra")
+    this.isDarkMode = isChecked;
     this.themeToggle.emit();
   }
-  toggleMono() {
-    this.isMono = !this.isMono;
-  }
+  
 }

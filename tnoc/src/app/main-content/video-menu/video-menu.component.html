@@ -1,4 +1,4 @@
-<div class="menu-container">
+<div class="menu-container" [class.dark-mode]="isDarkMode" [class.light-mode]="!isDarkMode">
   <section class="menu-grid video-menu">
     <div class="menu-title">
       <span><strong>{{ menu?.title }}</strong></span>
@@ -25,10 +25,10 @@
           </mat-expansion-panel>
         </mat-accordion>
       </div>
-      <div class="menu-sidebar" routerLink="/video" matTooltip="Video Index"> 
-        <span> >> </span>
-        
-      </div>
+      <div class="menu-sidebar" routerLink="/video">
+				<span> >> </span>
+				<div class="tooltip">Video Index</div>
+			</div>
     </div>
   </section>
 </div>
