@@ -27,25 +27,25 @@ export const menus: Menu[] = [
       {
         title: '#landscape',
         year: '2022',
-        image: '/assets/imgs/bollers2.JPG',
+        image: '/assets/imgs/glove_2.jpg',
       },
       {
         title: '#treeoflife',
         year: '2022',
 
-        image: '/assets/imgs/bollers2.JPG',
+        image: '/assets/imgs/rodin_walker.png',
       },
       {
         title: '#landscape',
         year: '2022',
 
-        image: '/assets/imgs/bollers2.JPG',
+        image: '/assets/imgs/cruz.png',
       },
       {
         title: '#treeoflife',
         year: '2022',
 
-        image: '/assets/imgs/bollers2.JPG',
+        image: '/assets/imgs/cubic_buildin.png',
       },
       {
         title: '#treeoflife',
