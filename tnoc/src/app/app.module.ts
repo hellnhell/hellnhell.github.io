@@ -5,11 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
-import { EmbededVideoComponent } from './video-projects/embeded-video/embeded-video.component';
 import { MainContentComponent } from './main-content/main-content.component';
-import { CodeProjectsComponent } from './code-projects/code-projects.component';
-import { PhotoProjectsComponent } from './photo-projects/photo-projects.component';
-import { VideoProjectsComponent } from './video-projects/video-projects.component';
 import { PhotoMenuComponent } from './main-content/photo-menu/photo-menu.component';
 import { VideoMenuComponent } from './main-content/video-menu/video-menu.component';
 import { CodeMenuComponent } from './main-content/code-menu/code-menu.component';
@@ -18,6 +14,11 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MenuContainerComponent } from './menu-container/menu-container.component';
+import { ThemeToggleComponent } from './theme-toggle-btn/theme-toggle.component';
+import { PhotoProjectsComponent } from './indexs/photo-projects/photo-projects.component';
+import { VideoProjectsComponent } from './indexs/video-projects/video-projects.component';
+import { CodeProjectsComponent } from './indexs/code-projects/code-projects.component';
 
 
 
@@ -26,15 +27,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    PhotoProjectsComponent,
-    VideoProjectsComponent,
-    CodeProjectsComponent,
-    EmbededVideoComponent,
     MainContentComponent,
     PhotoMenuComponent,
+    PhotoProjectsComponent,
+    VideoProjectsComponent,
     VideoMenuComponent,
+    CodeProjectsComponent,
     CodeMenuComponent,
     ContactMenuComponent,
+    MenuContainerComponent,
+    ThemeToggleComponent,
   ],
   imports: [
     BrowserModule,

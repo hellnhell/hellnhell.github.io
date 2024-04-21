@@ -8,7 +8,6 @@ import { Menu } from '../models';
 })
 export class ContactMenuComponent implements OnInit {
   @Input() menu?: Menu;
-  @Input() isDarkMode = true;
 
   navLinks = [
     {

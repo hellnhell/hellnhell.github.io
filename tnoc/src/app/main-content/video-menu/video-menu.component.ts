@@ -8,7 +8,8 @@ import { Menu, MenuItem } from '../models';
 })
 export class VideoMenuComponent implements OnInit {
   @Input() menu?: Menu;
-  @Input() isDarkMode = true;
+
+  index = '/video'
   selectedVideo?: MenuItem;
   categories: { [key: string]: MenuItem[] } = {};
   panelOpenState = false;

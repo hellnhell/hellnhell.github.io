@@ -5,9 +5,10 @@
     align-items: center;
     justify-content: center;
     position: fixed;
-    bottom: 0;
+    bottom: 8px;
     z-index: 2;
     margin-top: 2%;
-    padding-right: 10px;
-    color: rgba(173, 0, 0, 0.61);
+    font-weight: bolder;
+    font-size: 12px;
+    color: rgba(216, 2, 2, 0.61);
 }

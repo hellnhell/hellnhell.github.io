@@ -1,20 +1,46 @@
-import { Component, ElementRef, EventEmitter, HostListener, OnInit, Output, ViewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  EventEmitter,
+  HostListener,
+  OnDestroy,
+  OnInit,
+  Output,
+  ViewChild,
+} from '@angular/core';
 import * as p5 from 'p5';
 import { menus } from './models';
+import { ThemeService } from '../services/theme.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-main-content',
   templateUrl: './main-content.component.html',
-  styleUrls: ['./main-content.component.scss']
+  styleUrls: ['./main-content.component.scss'],
 })
-export class MainContentComponent implements OnInit {
+export class MainContentComponent implements OnInit, OnDestroy {
   @Output() scrollEvent = new EventEmitter<number>();
-  @Output() themeToggle = new EventEmitter<void>();
 
-  @ViewChild('mainMenu') mainMenu!: ElementRef<HTMLDivElement>;
+  @ViewChild('mainMenu', { static: false })
+  mainMenu!: ElementRef<HTMLDivElement>;
+
+  menus = menus;
+
+  isDarkMode = false;
+  private subscriptions = new Subscription();
+
+  constructor(private themeService: ThemeService) {}
+
+  ngOnInit(): void {
+    this.subscriptions.add(
+      this.themeService.isDarkMode$.subscribe((isDarkMode) => {
+        this.isDarkMode = isDarkMode;
+      })
+    );
+  }
 
   @HostListener('window:wheel', ['$event'])
-  onWindowScroll(event: WheelEvent) {
+  onWindowScroll(event: WheelEvent): void {
     if (this.mainMenu) {
       const currentScroll = this.mainMenu.nativeElement.scrollLeft;
       const scrollAmount = event.deltaY;
@@ -23,18 +49,18 @@ export class MainContentComponent implements OnInit {
     }
   }
 
-  isDarkMode = false;
-  menus = menus;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }  
-
-  toggleTheme(isChecked: boolean) {
-    console.log("entra")
-    this.isDarkMode = isChecked;
-    this.themeToggle.emit();
+  scrollToContact(): void {
+    const contactMenu = this.mainMenu.nativeElement.querySelector('#contact-menu') as HTMLElement;
+    if (contactMenu) {
+      const scrollLeft = contactMenu.offsetLeft - this.mainMenu.nativeElement.offsetLeft;
+      this.mainMenu.nativeElement.scrollTo({
+        left: scrollLeft,
+        behavior: 'smooth'
+      });
+    }
   }
-  
+
+  ngOnDestroy() {
+    this.subscriptions.unsubscribe();
+  }
 }

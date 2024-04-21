@@ -1,6 +1,7 @@
-<div class="foggy-background" [class.dark-mode]="isDarkMode" [class.light-mode]="!isDarkMode">
+<div class="foggy-background" [class.dark-mode]="themeService.isDarkMode$ | async" [class.light-mode]="!(themeService.isDarkMode$ | async)">
 	<div class="fog" id="fog-layer-1"></div>
-  	<div class="fog" id="fog-layer-2"></div>
+	<div class="fog" id="fog-layer-2"></div>
+	<app-theme-toggle></app-theme-toggle>
 	<!-- <app-navbar></app-navbar> -->
 	<router-outlet (activate)="onActivate($event)"></router-outlet>
 	<app-footer></app-footer>

@@ -8,8 +8,8 @@ import { Menu } from '../models';
 })
 export class CodeMenuComponent implements OnInit {
   @Input() menu?: Menu;
-  @Input() isDarkMode = true;
 
+  index = 'Coding projects'
   randomImage: any;
 
   constructor() { }

@@ -1,15 +1,11 @@
-<div class="menu-container" [class.dark-mode]="isDarkMode" [class.light-mode]="!isDarkMode">
-	<section class="menu-grid contact-menu" >
-		<div class="menu-title">
-			<span><strong>{{ menu?.title }}</strong></span>
-			<span><strong>{{menu?.number}}</strong></span>
-		</div>
-		<div class="content-container">
-				<ul class="ul-link">
-					<li *ngFor="let link of navLinks">
-						<a [href]="link.url">{{link.name}}</a>
-					</li>
-				</ul>
-		</div>
-	</section>	
-</div>
+<app-menu-container 
+    [menu]="menu"
+    [menuType]="'contact-menu'">
+    <div class="content">
+        <ul class="ul-link">
+            <li *ngFor="let link of navLinks">
+                <a [href]="link.url">{{ link.name }}</a>
+            </li>
+        </ul>
+    </div>
+</app-menu-container>

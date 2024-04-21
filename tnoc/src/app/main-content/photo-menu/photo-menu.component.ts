@@ -8,8 +8,8 @@ import { Menu } from '../models';
 })
 export class PhotoMenuComponent implements OnInit {
   @Input() menu?: Menu;
-  @Input() isDarkMode = false;
   randomImage: any;
+  index = '/photography';
 
   constructor() { }
 

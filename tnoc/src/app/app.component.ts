@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ThemeService } from './services/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +10,11 @@ export class AppComponent {
   backgroundPositionX = 0;
   isDarkMode = false;
 
-  toggleTheme() {
-    this.isDarkMode = !this.isDarkMode;
+  constructor(public themeService: ThemeService) {}
+
+
+  toggleTheme(isDark: boolean): void {
+    this.themeService.setDarkMode(isDark);
   }
 
   onActivate(event: any) {
@@ -21,7 +25,7 @@ export class AppComponent {
     }
     if (event.themeToggle) {
       event.themeToggle.subscribe(() => {
-        this.toggleTheme();
+        this.themeService.toggleDarkMode();
       });
     }
   }

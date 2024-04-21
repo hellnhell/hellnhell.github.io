@@ -1,110 +1,22 @@
-.menu-container{
-  &.dark-mode .menu-grid.video-menu,
-	&.light-mode .menu-grid.video-menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 500px; 
-    margin: auto;
-    
-    .menu-title {
-      padding: 10px;
+.content {
+  display: flex;
+  flex-direction: row;
+  .video-player-container {
+    padding: 2rem;
+    width: 50%;
+  
+    video {
       width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-  
-    .content-container {
-      display:flex;
-      flex-direction: row;
-      justify-content: space-around;
-      width: 100%;
-      .video-player-container {
-        padding: 2rem;
-        width: 50%;
-        video {
-          width: 100%;
-        }
-      }
-  
-      .video-list-container {
-        width: 50%;
-        padding: 2rem;
-        cursor: pointer;
-        .video-items {
-          text-align: right;
-        }
-      }
-  
-      .menu-sidebar {
-        display: flex;
-				flex-direction: column;
-				justify-content: flex-end;
-				padding: 10px;
-				cursor: pointer;
-      }
-  
-      .tooltip {
-        display: none;
-        position: absolute;
-        left: 10px; 
-        top: 50%;
-        transform: translateY(-50%) rotate(-90deg);
-        background-color: transparent;
-        color: rgba(173, 0, 0, 0.795);
-        padding: 5px 10px;
-        white-space: nowrap;
-      }
-  
-      &:hover .tooltip {
-        display: block;
-      }
     }
   }
-
-  &.dark-mode {
-		.menu-grid.video-menu {
-			color: white;
-			.content-container {
-				border: 1px solid white;
-				border-top: none;
-        .video-player-container {
-          border-right: 1px solid white;
-        }
-			}
-
-			.menu-title{
-				border: 1px solid white;
-			}
-
-			.menu-sidebar {
-				border-left: 1px solid white;
-				color: white;
-			}
-		}
-	}
-
-	// Adjustments for light mode
-	&.light-mode {
-		.menu-grid.video-menu {
-			color: black;
-			.content-container {
-				border: 1px solid black;
-				border-top: none;
-        .video-player-container {
-          border-right: 1px solid white;
-        }
-			}
-
-			.menu-title{
-				border: 1px solid black;
-			}
-
-			.menu-sidebar {
-				border-left: 1px solid black;
-				color: black;
-			}
-		}
-	}
+  
+  .video-list-container {
+    width: 50%;
+    padding: 2rem;
+    cursor: pointer;
+  
+    .video-items {
+      text-align: right;
+    }
+  }
 }

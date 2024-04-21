@@ -1,34 +1,25 @@
-<div class="menu-container" [class.dark-mode]="isDarkMode" [class.light-mode]="!isDarkMode">
-  <section class="menu-grid video-menu">
-    <div class="menu-title">
-      <span><strong>{{ menu?.title }}</strong></span>
-      <span><strong>{{ menu?.number }}</strong></span>
+<app-menu-container [menu]="menu" [menuType]="'video-menu'" [sidebarLink]="index" [sidebarText]="'Video'">
+  <div class="content content-container">
+    <div class="video-player-container">
+      <video controls [src]="selectedVideo.video" *ngIf="selectedVideo">
+        Your browser does not support the video tag.
+      </video>
     </div>
-    <div class="content-container">
-      <div class="video-player-container">
-        <video controls [src]="selectedVideo.video" *ngIf="selectedVideo">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="video-list-container">
-        <mat-accordion >
-          <mat-expansion-panel *ngFor="let category of categories | keyvalue" (opened)="panelOpenState = true"
-          (closed)="panelOpenState = false">
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                {{ category.key }}
-              </mat-panel-title>
-            </mat-expansion-panel-header>
-            <div *ngFor="let video of category.value" (click)="selectVideo(video)" class="video-item">
-              <div>{{ video.title }}</div>
-            </div>
-          </mat-expansion-panel>
-        </mat-accordion>
-      </div>
-      <div class="menu-sidebar" routerLink="/video">
-				<span> >> </span>
-				<div class="tooltip">Video Index</div>
-			</div>
+    <div class="video-list-container">
+      <mat-accordion>
+        <mat-expansion-panel *ngFor="let category of categories | keyvalue" (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{ category.key }}
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div *ngFor="let video of category.value" (click)="selectVideo(video)" class="video-item">
+            <div>{{ video.title }}</div>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
     </div>
-  </section>
-</div>
+  </div>
+</app-menu-container>
+

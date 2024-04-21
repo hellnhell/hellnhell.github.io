@@ -6,57 +6,57 @@
   width: 100vw;
   color: black;
   font-weight: bold;
-  z-index: 9;
   overflow: hidden;
-  .border-text {
+  
+  .sidebar {
     position: fixed;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    transform: rotate(180deg);
+    border-left: 1px solid black;
+    padding: 45px 25px;
     writing-mode: vertical-rl;
     white-space: nowrap;
     overflow: hidden;
     user-select: none;
-    pointer-events: none;
-    z-index: 10;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
+    font-size: larger;
+    .contact-btn {
+      pointer-events: auto;
+      cursor: pointer;
+    }
   }
 
-  .border-text-left {
-    display: flex;
-    height: 100%;
-    transform: rotate(180deg);
-    border-left: 1px solid black;
-    .sidebar-btns{
-      mat-checkbox {
-        .mat-checkbox-layout {
-          .mat-checkbox-label {
-            color: #666; 
-          }
+  .sidebar-btns {
+    mat-checkbox {
+      .mat-checkbox-layout {
+        .mat-checkbox-label {
+          color: #666;
         }
-        .mat-checkbox-frame {
-          background-color:black; 
-        }
-      
-        &.mat-checkbox-checked .mat-checkbox-background {
-          background-color: black;
-        } 
+      }
+
+      .mat-checkbox-frame {
+        background-color: black;
+      }
+
+      &.mat-checkbox-checked .mat-checkbox-background {
+        background-color: black;
       }
     }
   }
-      
 
   .main-content {
-    position: absolute; 
-    top: 35px; 
-    bottom: 35px; 
-    left: 60px; 
-    right: 35px; 
+    position: absolute;
+    top: 35px;
+    bottom: 35px;
+    left: 60px;
+    right: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    overflow: auto; 
-    
+    overflow: auto;
+
     .main-menu {
       display: flex;
       flex-direction: row;
@@ -67,39 +67,29 @@
       -ms-overflow-style: none;
       scrollbar-width: none;
       overflow-x: auto;
-      gap: 15%;
+      gap: 30%;
       height: 100%;
       width: auto;
       max-width: calc(100% - 20px);
-      padding: 0 45px;
-      box-sizing: border-box; 
+      padding: 0 20%;
+      box-sizing: border-box;
+
       &::-webkit-scrollbar {
         display: none;
       }
+
+    }
+  }
+
+  &.dark-mode {
+    color: white;
+
+  }
+
+  &.light-mode {
+    color: black;
+    .border-text-left {
+      border-color: white
     }
   }
 }
-
-.border-box.light-mode {  
-  .border-text {
-    color: white; 
-    border-color: #ddd;
-  }
-  .border-text-bottom {
-    color: rgba(173, 0, 0, 0.61);
-  }
-  .main-content {    
-    .sidebar-btns{     
-      .mat-checkbox-frame {
-        background-color:black; 
-      }
-    
-      &.mat-checkbox-checked .mat-checkbox-background {
-        background-color: black;
-      } 
-    }
-  }
-}
-  
-  
-

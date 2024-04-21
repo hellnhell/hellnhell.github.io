@@ -1,19 +1,9 @@
-<div class="menu-container" [class.dark-mode]="isDarkMode" [class.light-mode]="!isDarkMode">
-	<section class="menu-grid code-menu">
-		<div class="menu-title">
-			<span><strong>{{ menu?.title }}</strong></span>
-			<span><strong>{{menu?.number}}</strong></span>
-		</div>
-		<div class="content-container">
-			<div class="grid-items">
-				<div class="grid-item" *ngIf="randomImage">
-					<img [src]="randomImage.image" loading="lazy" [alt]="randomImage.title">
-				</div>
-			</div>
-			<div class="menu-sidebar" routerLink="/code-projects">
-				<span> >> </span>
-				<div class="tooltip">Coding projects Index</div>
-			</div>
-		</div>
-	</section>
-</div>
+<app-menu-container [menu]="menu" [menuType]="'code-menu'" [sidebarLink]="index" [sidebarText]="'Code'">
+  <div class="content content-container">
+    <div class="grid-items">
+      <div class="grid-item" *ngIf="randomImage">
+        <img [src]="randomImage.image" loading="lazy" [alt]="randomImage.title">
+      </div>
+    </div>
+  </div>
+</app-menu-container>
