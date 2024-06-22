@@ -1,7 +1,15 @@
 <app-menu-container [menu]="menu" [menuType]="'video-menu'" [sidebarLink]="index" [sidebarText]="'Video'">
   <div class="content content-container">
     <div class="video-player-container">
-      <video controls [src]="selectedVideo.video" *ngIf="selectedVideo">
+      <video
+      controls
+      [src]="selectedVideo.video"
+      *ngIf="selectedVideo"
+      (error)="onVideoError($event)"
+      (loadeddata)="onVideoLoad($event)"
+      (stalled)="onVideoError($event)"
+      (waiting)="onVideoError($event)"
+      preload="auto">
         Your browser does not support the video tag.
       </video>
     </div>

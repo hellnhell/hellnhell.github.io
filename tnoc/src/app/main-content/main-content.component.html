@@ -5,9 +5,9 @@
 	</div>
 	<div class="main-content">
 		<div class="main-menu" #mainMenu>
-			<app-photo-menu [menu]="menus[0]" *ngIf="menus[0].isActive"></app-photo-menu>
-			<app-video-menu [menu]="menus[1]" *ngIf="menus[1].isActive"></app-video-menu>
 			<app-code-menu [menu]="menus[2]" *ngIf="menus[2].isActive"></app-code-menu>
+			<app-video-menu [menu]="menus[1]" *ngIf="menus[1].isActive"></app-video-menu>
+			<app-photo-menu [menu]="menus[0]" *ngIf="menus[0].isActive"></app-photo-menu>
 			<app-contact-menu id="contact-menu" [menu]="menus[3]" *ngIf="menus[3].isActive"></app-contact-menu>
 		</div>
 	</div>

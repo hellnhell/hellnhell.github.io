@@ -9,7 +9,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import * as p5 from 'p5';
-import { menus } from './models';
+import { menus } from '../models';
 import { ThemeService } from '../services/theme.service';
 import { Subscription } from 'rxjs';
 

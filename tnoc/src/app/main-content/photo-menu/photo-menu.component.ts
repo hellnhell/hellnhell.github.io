@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Menu } from '../models';
+import { Menu } from '../../models';
 
 @Component({
   selector: 'app-photo-menu',
@@ -9,7 +9,7 @@ import { Menu } from '../models';
 export class PhotoMenuComponent implements OnInit {
   @Input() menu?: Menu;
   randomImage: any;
-  index = '/photography';
+  index = '/home/photography';
 
   constructor() { }
 

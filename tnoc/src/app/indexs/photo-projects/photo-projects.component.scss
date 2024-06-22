@@ -1,20 +1,30 @@
 /* photo-projects.component.css */
 .photo-grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Creates a responsive grid */
-	grid-gap: 10px; /* Adjust the gap between grid items */
-	padding: 10px;
-  }
+	grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); 
+	grid-gap: 16%; 
+	padding: 10%;
+	height: 100%;
+	overflow-y: scroll;
+}
   
-  .photo-item {
+.photo-item {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-  }
+}
   
-  .photo-item img {
-	width: 100%; /* Makes image fill the container */
-	height: auto;
-	object-fit: cover; /* Adjusts the image size to cover the area without stretching */
-  }
+.photo-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease-out allow-discrete; 
+	cursor: crosshair;
+}
+
+.photo-item:hover img {
+  transform: scale(2); 
+	box-shadow: 0 0 8px rgba(0,0,0,0.5);
+}
+
   

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Menu } from '../models';
+import { Menu } from '../../models';
 
 @Component({
   selector: 'app-contact-menu',

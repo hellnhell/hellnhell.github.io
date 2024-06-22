@@ -5,12 +5,14 @@ import { PhotoProjectsComponent } from './indexs/photo-projects/photo-projects.c
 import { VideoProjectsComponent } from './indexs/video-projects/video-projects.component';
 import { CodeProjectsComponent } from './indexs/code-projects/code-projects.component';
 
+
 const routes: Routes = [
-  { path: 'home', component: MainContentComponent }, 
-  { path: 'photography', component: PhotoProjectsComponent },
-  { path: 'videos', component: VideoProjectsComponent },
-  { path: 'code-projects', component: CodeProjectsComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' } // default route
+  { path: 'home', component: MainContentComponent },
+  { path: 'home/photography', component: PhotoProjectsComponent },
+  { path: 'home/videos', component: VideoProjectsComponent },
+  { path: 'home/code-projects', component: CodeProjectsComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' }, 
+  { path: '**', redirectTo: '/home' } 
 ];
 
 @NgModule({

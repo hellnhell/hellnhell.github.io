@@ -1,47 +1,34 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.querySelector(".container");
 
-document.addEventListener("mousemove", (e) => {
-    let container = document.querySelector(".container");
-    let circle = document.createElement("span");
-
-    circle.style.left = e.clientX + "px";
-    circle.style.top = e.clientY + "px";
-
-    let size = Math.random() * 20;
-    circle.style.width = 10 + size + "px";
-    circle.style.height = 10 + size + "px";
+  const createCircle = (x, y, size) => {
+    const circle = document.createElement("span");
+		circle.classList.add("circle"); 
+    circle.style.left = `${x}px`;
+    circle.style.top = `${y}px`;
+    circle.style.width = `${size}px`;
+    circle.style.height = `${size}px`;
     container.appendChild(circle);
-})
 
-document.addEventListener("touchstart", (e) => {
+    setTimeout(() => {
+      circle.remove();
+    }, 3000);
+  };
+
+  document.addEventListener("mousemove", (e) => {
+    const size = Math.random() * 20 + 10;
+    createCircle(e.clientX, e.clientY, size);
+  });
+
+  let touchMoveTimeout;
+  document.addEventListener("touchstart", () => {
     document.addEventListener("touchmove", (e) => {
-
-        let container = document.querySelector(".container");
-        let circle = document.createElement("span");
-
-        circle.style.left = e.touches[0].clientX + "px";
-        circle.style.top = e.touches[0].clientY + "px";
-
-        let size = Math.random() * 50;
-        circle.style.width = 20 + size + "px";
-        circle.style.height = 20 + size + "px";
-        container.appendChild(circle);
-    })
-})
-
-
-// let index = 0;
-// slider();
-
-// function slider(){
-//     let slides = document.getElementsByClassName("mySlides");
-//     for (let i = 0; i < slides.length; i++){
-//         slides[i].style.display = "none";
-//     }
-//     index++;
-//     if (index > slides.length)
-//         index = 1;
-//     slides[index - 1].style.display = "block";
-//     setTimeout(slider, 3000);
-// }
-
-
+      if (touchMoveTimeout) return;
+      touchMoveTimeout = setTimeout(() => {
+        const size = Math.random() * 50 + 20;
+        createCircle(e.touches[0].clientX, e.touches[0].clientY, size);
+        touchMoveTimeout = null;
+      }, 50);
+    });
+  });
+});

@@ -19,6 +19,7 @@ export class MenuContainerComponent implements OnInit, OnDestroy{
   constructor(private themeService: ThemeService) { }
 
   ngOnInit() {
+    console.log(this.sidebarLink)
     this.subscription.add(this.themeService.isDarkMode$.subscribe(mode => {
       this.isDarkMode = mode;
     }));

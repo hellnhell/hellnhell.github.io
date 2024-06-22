@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Menu, MenuItem } from '../models';
+import { Menu, MenuItem } from '../../models';
 
 @Component({
   selector: 'app-video-menu',
@@ -9,7 +9,7 @@ import { Menu, MenuItem } from '../models';
 export class VideoMenuComponent implements OnInit {
   @Input() menu?: Menu;
 
-  index = '/video'
+  index = '/home/videos'
   selectedVideo?: MenuItem;
   categories: { [key: string]: MenuItem[] } = {};
   panelOpenState = false;
@@ -35,5 +35,13 @@ export class VideoMenuComponent implements OnInit {
   
   selectVideo(video: any): void {
     this.selectedVideo = video;
+  }
+
+  onVideoError(event: Event): void {
+    console.error('Video failed to load:', event);
+  }
+
+  onVideoLoad(event: Event): void {
+    console.log('Video loaded successfully:', event);
   }
 }

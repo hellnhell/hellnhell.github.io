@@ -1,8 +1,8 @@
 <app-menu-container [menu]="menu" [menuType]="'code-menu'" [sidebarLink]="index" [sidebarText]="'Code'">
   <div class="content content-container">
     <div class="grid-items">
-      <div class="grid-item" *ngIf="randomImage">
-        <img [src]="randomImage.image" loading="lazy" [alt]="randomImage.title">
+      <div class="grid-item">
+        <div #p5Canvas class="p5-canvas-container"></div>
       </div>
     </div>
   </div>

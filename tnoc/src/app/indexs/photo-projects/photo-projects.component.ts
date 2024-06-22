@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data-setting.service';
 
 @Component({
   selector: 'app-photo-projects',
@@ -6,27 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./photo-projects.component.scss']
 })
 export class PhotoProjectsComponent implements OnInit {
-  photoNames = [
-    'bollers2.JPG',
-    'ciu-tumbado.png',
-    'cruz.png',
-    'cubic_buildin.png',
-    'f4.png',
-    'glove_1.JPG',
-    'glove_2.jpg',
-    'hanged.png',
-    'man_window.png',
-    'rodin_walker.png',
-    'señor1.JPG',
-    'señor2.JPG',
-    'señor3.JPG',
-    'train.png',
-    'women-dus.jpg',
-  ];
+  photoNames: string[] = [];
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
+    this.photoNames = this.dataService.getImageUrls();
   }
 
 }

@@ -1,24 +1,32 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Menu } from '../models';
+import { AfterViewInit, Component, ElementRef, Input, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Menu } from '../../models';
+import { P5Service } from 'src/app/services/sketch-service.service';
 
 @Component({
   selector: 'app-code-menu',
   templateUrl: './code-menu.component.html',
   styleUrls: ['./code-menu.component.scss']
 })
-export class CodeMenuComponent implements OnInit {
+export class CodeMenuComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() menu?: Menu;
 
-  index = 'Coding projects'
+  @ViewChild('p5Canvas') p5Canvas!: ElementRef;
+
+  index = '/home/code-projects'
   randomImage: any;
 
-  constructor() { }
+  constructor(private p5Service: P5Service) { }
 
   ngOnInit(): void {
-    if (this.menu && this.menu.items.length) {
-      const randomIndex = Math.floor(Math.random() * this.menu.items.length);
-      this.randomImage = this.menu.items[randomIndex];
+  }
+
+  ngAfterViewInit(): void {
+    if (this.p5Canvas) {
+      this.p5Service.createSketch(this.p5Canvas, 1);
     }
   }
 
+  ngOnDestroy(): void {
+    this.p5Service.removeSketch();
+  }
 }
