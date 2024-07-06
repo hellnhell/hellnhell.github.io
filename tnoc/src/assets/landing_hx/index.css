@@ -87,6 +87,7 @@ body {
 /* Background Photo Styles */
 .bg-photo {
   height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -114,34 +115,34 @@ body {
 }
 
 .bg-photo img:nth-child(1) {
-  width: 120%;
-  height: 120%;
-}
-
-.bg-photo img:nth-child(2) {
-  width: 100%;
+  width: 90%;
   height: 100%;
 }
 
+.bg-photo img:nth-child(2) {
+  width: 80%;
+  height: 90%;
+}
+
 .bg-photo img:nth-child(3) {
-  width: 150%;
-  height: 130%;
+  width: 100%;
+  height: 120%;
   overflow-y: hidden;
 }
 
 .bg-photo img:nth-child(4) {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 90%;
 }
 
 .bg-photo img:nth-child(5) {
-  width: 115%;
-  height: 115%;
+  width: 70%;
+  height: 98%;
 }
 
 .bg-photo img:nth-child(6) {
-  width: 130%;
-  height: 120%;
+  width: 80%;
+  height: 110%;
   overflow-y: hidden;
 }
 

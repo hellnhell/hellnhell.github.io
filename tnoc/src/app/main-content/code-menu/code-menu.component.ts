@@ -14,6 +14,8 @@ export class CodeMenuComponent implements OnInit, AfterViewInit, OnDestroy {
 
   index = '/home/code-projects'
   randomImage: any;
+  private p5InstanceIndexes: number[] = [];
+
 
   constructor(private p5Service: P5Service) { }
 
@@ -23,10 +25,13 @@ export class CodeMenuComponent implements OnInit, AfterViewInit, OnDestroy {
   ngAfterViewInit(): void {
     if (this.p5Canvas) {
       this.p5Service.createSketch(this.p5Canvas, 1);
+      this.p5InstanceIndexes.push(0);
     }
   }
 
   ngOnDestroy(): void {
-    this.p5Service.removeSketch();
-  }
+    this.p5InstanceIndexes.forEach(index => {
+      this.p5Service.removeSketch(index);
+    });
+    }
 }

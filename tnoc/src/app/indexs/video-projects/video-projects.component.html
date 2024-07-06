@@ -1,12 +1,21 @@
+<div class="alert-banner">
+  If you are on a large screen, we recommend playing the videos in full screen for the best experience.
+</div>
 <div>
-	<div class="video-grid">
-		<div class="video-item" *ngFor="let videoName of videoNames">
-			<video controls>
-			  <source src="assets/imgs/{{videoName}}" type="video/mp4">
-			  Your browser does not support the video tag.
-			</video>
-		</div>
-	</div><div>
-		<button routerLink="/">Back to Home</button>
-	</div>
+  <div class="video-grid">
+    <div *ngFor="let category of categorizedVideos" class="category" [ngClass]="getCategoryClassName(category.category)">
+      <h3>{{ category.category }}</h3>
+      <div class="video-row">
+        <div class="video-item" *ngFor="let video of category.videos">
+          <video controls [poster]="video.poster || null">
+            <source [src]="'assets/vids/' + video.name" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <button routerLink="/">Back to Home</button>
+  </div>
 </div>

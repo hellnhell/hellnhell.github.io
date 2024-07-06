@@ -1,22 +1,74 @@
+.alert-banner {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #ffcc00;
+  color: #000;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  z-index: 1000;
+}
+
 .video-grid {
-	display: grid;
-	grid-template-columns: repeat(5, 20%); 
-	grid-gap: 10px;
-	padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 48px;
+  gap: 42px; 
+	height: 100vh;
+  overflow-y: auto;
+
+  .video-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 24px;
+    width: 100%;
+    height: 550px;
+
+    .video-item {
+      position: relative;
+      overflow: hidden;
+
+      video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
   }
-  
-  .video-item {
-	position: relative;
-	padding-top: 56.25%;
-	overflow: hidden;
+
+  .category {
+    &.clip-videos .video-row {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &.mylar-videos .video-row {
+      grid-template-columns: repeat(3, 1fr); 
+    }
+
+		&.full-videos .video-row,
+    &.hefestion-videos .video-row {
+			display: flex;
+      justify-content: center;
+			.video-item {
+        width: 50%;
+      }
+		}
+
+    &.wp-videos .video-row {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &.lovers-videos .video-row {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &.test-videos .video-row {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
-  
-  .video-item video {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-  }
-  
+}
