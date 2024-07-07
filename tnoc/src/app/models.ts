@@ -432,17 +432,6 @@ export const menus: Menu[] = [
     title: 'CONTACT',
     number: '04',
     isActive: true,
-    items: [
-		{
-			title: '#treeoflife',
-			year: '2022',
-			image: '/assets/imgs/bollers2.JPG',
-		  },
-		  {
-			title: '#landscape',
-			year: '2022',
-			image: '/assets/imgs/bollers2.JPG',
-		  },
-    ],
+    items: [],
   },
 ];
