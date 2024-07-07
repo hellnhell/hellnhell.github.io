@@ -24,7 +24,6 @@ export class VideoMenuComponent implements OnInit {
 
   categorizeVideos(): void {
     this.menu?.items.forEach(item => {
-      console.log(item.videoCategory)
       const category = item.videoCategory as string;
       if (!this.categories[category]) {
         this.categories[category] = [];
@@ -39,9 +38,5 @@ export class VideoMenuComponent implements OnInit {
 
   onVideoError(event: Event): void {
     console.error('Video failed to load:', event);
-  }
-
-  onVideoLoad(event: Event): void {
-    console.log('Video loaded successfully:', event);
   }
 }
