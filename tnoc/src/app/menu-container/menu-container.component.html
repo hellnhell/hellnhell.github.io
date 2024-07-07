@@ -1,0 +1,15 @@
+<div class="menu-container" [class.dark-mode]="isDarkMode" [class.light-mode]="!isDarkMode">
+  <section [ngClass]="['menu-grid', menuType]">
+    <div class="menu-title">
+      <span><strong>{{ menu?.title }}</strong></span>
+      <span><strong>{{ menu?.number }}</strong></span>
+    </div>
+    <div class="content-container">
+      <ng-content select=".content"></ng-content>
+      <div class="menu-sidebar" *ngIf="menuType !== 'contact-menu'" [routerLink]="sidebarLink">
+        <span> >> </span>
+        <div class="tooltip">{{sidebarText}} + index</div>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,4 @@
+<button class="theme-toggle-btn" (click)="toggleTheme()" [class.dark]="currentTheme | async" [class.light]="!(currentTheme | async)">
+	<span class="toggle-circle" [class.dark]="currentTheme | async" [class.light]="!(currentTheme | async)"></span>
+	{{ (currentTheme | async) ? 'Light Mode' : 'Dark Mode' }}
+</button>

@@ -1,0 +1,82 @@
+.container {
+  margin: 20px;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	gap: 58px;
+	overflow-y: auto;
+	scroll-behavior: smooth;
+  .title {
+    margin: 20px;
+  }
+
+	.variations {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 100%;
+		.sketch-container {
+			display: flex;
+			justify-content: space-around;
+			flex-wrap: wrap;
+			padding: 24px;
+			.sketch-item {
+				display: flex;
+				flex-direction: column;
+				align-items: left;
+				margin: 10px;
+				.subtitle {
+					margin-top: 10px;
+				}
+				.canvas-container {
+					width: 400px;
+					height: 400px;
+				}
+			}
+		}
+	}
+
+	.highxtar {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 100%;
+		padding: 0 32px;
+		margin-bottom: 32px;
+		.landing-page-container {
+			padding: 32px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 550px;
+			.landing-page-iframe {
+				width: 80%;
+				display: flex;
+				margin-bottom: 24px;
+			}
+		}
+	}
+
+	.ual-project {
+		width: 100%;
+		display:  flex;
+		justify-content: center;
+		align-items: center;
+		padding: 32px;
+		.sketch-item {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+  .back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+}
