@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { PhotoMenuComponent } from './main-content/photo-menu/photo-menu.component';
@@ -15,17 +14,14 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MenuContainerComponent } from './menu-container/menu-container.component';
-import { ThemeToggleComponent } from './theme-toggle-btn/theme-toggle.component';
-import { PhotoProjectsComponent } from './indexs/photo-projects/photo-projects.component';
-import { VideoProjectsComponent } from './indexs/video-projects/video-projects.component';
-import { CodeProjectsComponent } from './indexs/code-projects/code-projects.component';
-
-
+import { ThemeToggleComponent } from './main-content/theme-toggle-btn/theme-toggle.component';
+import { PhotoProjectsComponent } from './main-content/indexs/photo-projects/photo-projects.component';
+import { VideoProjectsComponent } from './main-content/indexs/video-projects/video-projects.component';
+import { CodeProjectsComponent } from './main-content/indexs/code-projects/code-projects.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
     FooterComponent,
     MainContentComponent,
     PhotoMenuComponent,
@@ -47,6 +43,6 @@ import { CodeProjectsComponent } from './indexs/code-projects/code-projects.comp
     MatCheckboxModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

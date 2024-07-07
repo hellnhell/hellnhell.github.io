@@ -22,10 +22,6 @@ export class ContactMenuComponent implements OnInit {
       name: 'Instagram',
       url: 'https://www.instagram.com/helln_rm'
     },
-    {
-      name: 'CV',
-      url: 'aboutme.html'
-    },
   ];
   constructor() { }
 

@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainContentComponent } from './main-content/main-content.component';
-import { PhotoProjectsComponent } from './indexs/photo-projects/photo-projects.component';
-import { VideoProjectsComponent } from './indexs/video-projects/video-projects.component';
-import { CodeProjectsComponent } from './indexs/code-projects/code-projects.component';
+import { PhotoProjectsComponent } from './main-content/indexs/photo-projects/photo-projects.component';
+import { VideoProjectsComponent } from './main-content/indexs/video-projects/video-projects.component';
+import { CodeProjectsComponent } from './main-content/indexs/code-projects/code-projects.component';
 
 
 const routes: Routes = [
