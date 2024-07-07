@@ -1,15 +1,8 @@
-:host {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-	z-index: 1000;
-}
-
 .theme-toggle-btn {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 16px;
+  padding-right: 32px;
   border: none;
   background-color: transparent;
   cursor: pointer;

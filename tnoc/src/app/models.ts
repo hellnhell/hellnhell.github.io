@@ -72,27 +72,17 @@ export const menus: Menu[] = [
       {
         title: '#treeoflife',
         year: '2022',
-        image: '/assets/imgs/glove1.JPEG',
+        image: '/assets/imgs/train.png',
       },
       {
         title: '#treeoflife',
         year: '2022',
-        image: '/assets/imgs/glove2.JPEG',
+        image: '/assets/imgs/train2.JPEG',
       },
       {
         title: '#treeoflife',
         year: '2022',
         image: '/assets/imgs/glove3.JPG',
-      },
-      {
-        title: '#treeoflife',
-        year: '2022',
-        image: '/assets/imgs/glove4.jpg',
-      },
-      {
-        title: '#treeoflife',
-        year: '2022',
-        image: '/assets/imgs/glove5.JPEG',
       },
       {
         title: '#treeoflife',
@@ -103,21 +93,6 @@ export const menus: Menu[] = [
         title: '#treeoflife',
         year: '2022',
         image: '/assets/imgs/glove7.JPEG',
-      },
-      {
-        title: '#treeoflife',
-        year: '2022',
-        image: '/assets/imgs/glove8.JPEG',
-      },
-      {
-        title: '#treeoflife',
-        year: '2022',
-        image: '/assets/imgs/glove9.JPEG',
-      },
-      {
-        title: '#treeoflife',
-        year: '2022',
-        image: '/assets/imgs/glove10.JPEG',
       },
       {
         title: '#treeoflife',
@@ -138,11 +113,6 @@ export const menus: Menu[] = [
         title: '#treeoflife',
         year: '2022',
         image: '/assets/imgs/glove14.JPEG',
-      },
-      {
-        title: '#treeoflife',
-        year: '2022',
-        image: '/assets/imgs/glove15.JPEG',
       },
       {
         title: '#treeoflife',
@@ -172,22 +142,12 @@ export const menus: Menu[] = [
       {
         title: '#treeoflife',
         year: '2022',
-        image: '/assets/imgs/glove21.JPEG',
-      },
-      {
-        title: '#treeoflife',
-        year: '2022',
         image: '/assets/imgs/glove22.JPEG',
       },
       {
         title: '#treeoflife',
         year: '2022',
         image: '/assets/imgs/glove23.JPEG',
-      },
-      {
-        title: '#treeoflife',
-        year: '2022',
-        image: '/assets/imgs/glove24.JPEG',
       },
       {
         title: '#treeoflife',
@@ -217,14 +177,8 @@ export const menus: Menu[] = [
       {
         title: '#treeoflife',
         year: '2022',
-        image: '/assets/imgs/glove30.JPEG',
-      },
-      {
-        title: '#treeoflife',
-        year: '2022',
         image: '/assets/imgs/glove31.JPEG',
       },
-
       {
         title: '#landscape',
         year: '2022',
@@ -239,6 +193,11 @@ export const menus: Menu[] = [
         title: '#treeoflife',
         year: '2022',
         image: '/assets/imgs/hanged.png',
+      },
+      {
+        title: '#treeoflife',
+        year: '2022',
+        image: '/assets/imgs/kieffer2.JPEG',
       },
       {
         title: '#treeoflife',
@@ -264,16 +223,6 @@ export const menus: Menu[] = [
         title: '#treeoflife',
         year: '2022',
         image: '/assets/imgs/justice2.jpg',
-      },
-      {
-        title: '#treeoflife',
-        year: '2022',
-        image: '/assets/imgs/kieffer1.JPEG',
-      },
-      {
-        title: '#treeoflife',
-        year: '2022',
-        image: '/assets/imgs/kieffer2.JPEG',
       },
       {
         title: '#treeoflife',
@@ -313,26 +262,6 @@ export const menus: Menu[] = [
       {
         title: '#treeoflife',
         year: '2022',
-        image: '/assets/imgs/man_sky.JPEG',
-      },
-      {
-        title: '#treeoflife',
-        year: '2022',
-        image: '/assets/imgs/man_window.JPEG',
-      },
-      {
-        title: '#treeoflife',
-        year: '2022',
-        image: '/assets/imgs/man_window.png',
-      },
-      {
-        title: '#treeoflife',
-        year: '2022',
-        image: '/assets/imgs/paris_chair.JPEG',
-      },
-      {
-        title: '#treeoflife',
-        year: '2022',
         image: '/assets/imgs/purple1.JPEG',
       },
       {
@@ -344,6 +273,21 @@ export const menus: Menu[] = [
         title: '#treeoflife',
         year: '2022',
         image: '/assets/imgs/purple3.JPEG',
+      },
+      {
+        title: '#treeoflife',
+        year: '2022',
+        image: '/assets/imgs/man_sky.JPEG',
+      },
+      {
+        title: '#treeoflife',
+        year: '2022',
+        image: '/assets/imgs/man_window.JPEG',
+      },
+      {
+        title: '#treeoflife',
+        year: '2022',
+        image: '/assets/imgs/paris_chair.JPEG',
       },
       {
         title: '#treeoflife',
@@ -378,11 +322,6 @@ export const menus: Menu[] = [
       {
         title: '#treeoflife',
         year: '2022',
-        image: '/assets/imgs/sky2.JPEG',
-      },
-      {
-        title: '#treeoflife',
-        year: '2022',
         image: '/assets/imgs/sky3.JPEG',
       },
       {
@@ -408,32 +347,12 @@ export const menus: Menu[] = [
       {
         title: '#treeoflife',
         year: '2022',
-        image: '/assets/imgs/summer_chair.JPEG',
-      },
-      {
-        title: '#treeoflife',
-        year: '2022',
-        image: '/assets/imgs/train.png',
-      },
-      {
-        title: '#treeoflife',
-        year: '2022',
-        image: '/assets/imgs/train2.JPEG',
-      },
-      {
-        title: '#treeoflife',
-        year: '2022',
         image: '/assets/imgs/trains.JPEG',
       },
       {
         title: '#treeoflife',
         year: '2022',
         image: '/assets/imgs/wedding.JPEG',
-      },
-      {
-        title: '#treeoflife',
-        year: '2022',
-        image: '/assets/imgs/window1.JPEG',
       },
       {
         title: '#treeoflife',

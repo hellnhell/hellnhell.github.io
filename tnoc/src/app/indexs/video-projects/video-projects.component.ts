@@ -11,7 +11,7 @@ export class VideoProjectsComponent implements OnInit {
     { name: 'CLIP_CHAIR_1.mp4' },
     { name: 'CLIP_MIR_1.mp4' },
     { name: 'CLIP_SAND_1.mp4' },
-    { name: 'FULL_1_BN.mp4' },
+    { name: 'FULL_1_BN.mp4', poster: 'assets/imgs/wp_cover2.png' },
     { name: 'HEFESTION.mp4' },
     { name: 'lovers_cuch.mp4', poster: 'assets/imgs/LOVERSI.png' },
     { name: 'lovers.mp4', poster: 'assets/imgs/LOVERSII.png' },
@@ -55,5 +55,14 @@ export class VideoProjectsComponent implements OnInit {
 
   getCategoryClassName(category: string): string {
     return category.replace(/\s+/g, '-').toLowerCase();
+  }
+
+  playPauseVideo(event: Event): void {
+    const video = event.target as HTMLVideoElement;
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
   }
 }

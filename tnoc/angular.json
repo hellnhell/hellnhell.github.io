@@ -78,10 +78,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "tnoc:build:production"
+              "buildTarget": "tnoc:build:production"
             },
             "development": {
-              "browserTarget": "tnoc:build:development"
+              "buildTarget": "tnoc:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -89,7 +89,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "tnoc:build"
+            "buildTarget": "tnoc:build"
           }
         },
         "test": {
