@@ -1,0 +1,14 @@
+.grid-items {
+	flex-grow: 1;
+	justify-content: center;
+	align-items: center;
+
+	.grid-item {
+		padding: 2rem;
+		img {
+			width: auto;
+			max-height: 50vh;
+			object-fit: cover;
+		}
+	}
+}
