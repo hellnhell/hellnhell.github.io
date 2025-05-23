@@ -1,0 +1,12 @@
+<div class="border-box" [class.dark-mode]="isDarkMode" [class.light-mode]="!isDarkMode">
+	<div class="sidebar">
+		<span>The Nature of Chaos</span>
+		<span class="contact-btn" (click)="scrollToContact()">Contact</span>
+	</div>
+	<div class="main-content">
+		<div class="main-menu" #mainMenu>
+			<app-code-menu [menu]="menus[0]" *ngIf="menus[0].isActive"></app-code-menu>
+			<app-contact-menu id="contact-menu" [menu]="menus[1]" *ngIf="menus[1].isActive"></app-contact-menu>
+		</div>
+	</div>
+</div>
