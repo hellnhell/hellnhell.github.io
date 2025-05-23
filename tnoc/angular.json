@@ -62,7 +62,7 @@
               "allowedCommonJsDependencies": [
                 "p5"
               ],
-              "baseHref": "/home/"
+              "baseHref": "/"
             },
             "development": {
               "buildOptimizer": false,
